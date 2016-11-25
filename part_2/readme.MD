@@ -8,8 +8,8 @@ run 100ns
 ...`
 
 #Exercise 6
-*[links to source code]
-*error with compiler needed space after .sdc code
+* [links to source code]
+* error with compiler needed space after .sdc code
 ## TimeQuest Timing Analyzer - Maximum clock frequency
 1) What are the predicted maximum frequencies for this circuit under the highest and lowest temperatures?
 Lowest temperature: 422.65 MHz
@@ -23,10 +23,11 @@ Highest temperature: 444.84 MHz
 The entry is red because data specifying timing constraints it not available for a number of the user-specified inputs.
 
 ##FPGA resources
-*Explain results:
-1)
-2)
-3)
+* Explain results:
+1. Pins.. 
+2. etc
+3. etc
+4. etc
 
 #Exercise 7
 |Q6|Q5|Q4|Q3|Q2|Q1|Q0|count|
