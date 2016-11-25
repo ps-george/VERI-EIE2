@@ -55,10 +55,8 @@ set_global_assignment -name VERILOG_FILE ../mylib/add3_ge5.v
 set_global_assignment -name VERILOG_FILE ../mylib/modulo_counter_16.v
 set_global_assignment -name VERILOG_FILE ex8_top.v
 set_global_assignment -name VERILOG_FILE delay_16.v
-set_global_assignment -name VERILOG_FILE lfsr14.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE fsm.v
 set_global_assignment -name VERILOG_FILE starting_line_fsm.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
