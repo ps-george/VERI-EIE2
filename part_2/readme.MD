@@ -44,4 +44,28 @@ The entry is red because data specifying timing constraints it not available for
 1|1|1|1|0|1|0|(1)22
 
 #Exercise 8
+Default: Stay at current state.
+|State descr| State  | Input required for next state  | Output |
+|---|---|---|---|
+|Wait| 0  | Trig=0  | en_lfsr = 1 |
+|Start| 1  | tick_hs |  |
+|LED ON| 2  | tick_hs | LED[0] = 1   |
+|LED ON| 3  | tick_hs | LED[1:0] = 1 |
+|LED ON| 4  | tick_hs | LED[2:0] = 1 |
+|LED ON| 5  | tick_hs | LED[3:0] = 1 |
+|LED ON| 6  | tick_hs | LED[4:0] = 1 |
+|LED ON| 7  | tick_hs | LED[5:0] = 1 |
+|LED ON| 8  | tick_hs | LED[6:0] = 1 |
+|LED ON| 9  | tick_hs | LED[7:0] = 1 |
+|LED ON| 10 | tick_hs | LED[8:0] = 1 |
+|LED ON| 11 | tick_hs | LED[9:0] = 1 |
+|Wait delay| 12 | time_out=1 | en_lfsr = 0, start_delay = 1 |
+|Wait| 0 | Trig = 0 | en_lfsr = 1|
+
+
+
+
+
+
+
 
