@@ -1,6 +1,7 @@
-module hex_to_7seg (out,in);
-	output [6:0] out;
+module hex_to_7seg (in,out);
+	
 	input [3:0] in;
+	output [6:0] out;
 	
 	reg [6:0] out;
 	

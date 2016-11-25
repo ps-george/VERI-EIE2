@@ -11,10 +11,128 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/George/VERI_EIE2/part_2/ex_5 {C:/George/VERI_EIE2/part_2/ex_5/counter_8.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5 {C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5/counter_8.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module counter_8
 # 
 # Top level modules:
 # 	counter_8
 # 
+vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8
+# vsim -do ex5_top_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter_8 
+# Loading work.counter_8
+# do ex5_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5 {C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5/counter_8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter_8
+# 
+# Top level modules:
+# 	counter_8
+# 
+add wave clock enable
+add wave -hexadecimal count
+fore enable 1
+# wrong # args: should be "foreach varList list ?varList list ...? command"
+force enable 1
+run 100ns
+add wave clock enable
+add wave clock enable
+force enable 1
+run 100ns
+run 100ns
+force clock 0 0, 1 10ns -repeat 20ns
+add wave -hexadecimal count
+run 100ns
+force enable 0
+run 100ns
+force enable 1
+run 100ns
+force clock 0 0ns, 1 10ns -repeat 20ns
+restart -f
+# Loading work.counter_8
+restart
+do ./tb_counter.do
+step
+step
+step
+step
+restart
+step
+step
+do ./tb_counter.do
+step -out -current
+step -out -current
+step -out -current
+step -out -current
+step
+step
+step
+do ./tb_counter.do step
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+do ./tb_counter.do
+# ** Error: (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+# Error in macro ././tb_counter.do line 1
+# (vish-4014) No objects found matching 'clock'.
+# (vish-4014) No objects found matching 'enable'.
+#     while executing
+# "add wave clock enable"
+restart
+do ./tb_counter.do
+# Break in Module counter_8 at C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5/counter_8.v line 28
+# Simulation Breakpoint: Break in Module counter_8 at C:/Users/gsp14/Documents/VERI_EIE2/part_2/ex_5/counter_8.v line 28
+# MACRO ././tb_counter.do PAUSED at line 5
+restart -f
