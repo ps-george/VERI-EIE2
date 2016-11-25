@@ -23,7 +23,7 @@ Highest temperature: 444.84 MHz
 The entry is red because data specifying timing constraints it not available for a number of the user-specified inputs.
 
 ##FPGA resources
-* Explain results:
+###Explain results:
 1. Pins.. 
 2. etc
 3. etc
