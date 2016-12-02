@@ -18,7 +18,7 @@ module modulo_counter_16(
 	input clock;
 	input enable;
 	input sreset;
-	input modulo;
+	input [BIT_SZ-1:0] modulo;
 	output tick;
 	
 // count needs to be declared as a reg

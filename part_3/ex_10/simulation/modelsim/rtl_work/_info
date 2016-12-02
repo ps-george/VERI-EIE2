@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\gsp14\VERI\VERI_EIE2\part_3\ex_10\simulation\modelsim
+vspi2dac
+!i10b 1
+!s100 LOMc_mPJkQeT9D^WL`Y]K3
+IA@e`lTMK4Vcc3bJXi_F3E3
+VFNOGDa=aYhJTn=76LYB@A2
+Z1 dC:\Users\gsp14\VERI\VERI_EIE2\part_3\ex_10\simulation\modelsim
+w1480670729
+8C:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib/spi2dac.v
+FC:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib/spi2dac.v
+L0 9
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1480671991.263000
+!s107 C:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib/spi2dac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib|C:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib/spi2dac.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/gsp14/VERI/VERI_EIE2/part_3/mylib -O0
