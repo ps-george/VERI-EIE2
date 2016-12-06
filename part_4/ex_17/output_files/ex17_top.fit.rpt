@@ -1,5 +1,5 @@
 Fitter report for ex17_top
-Tue Dec 06 11:02:58 2016
+Tue Dec 06 11:10:51 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Tue Dec 06 11:02:58 2016           ;
+; Fitter Status                   ; Successful - Tue Dec 06 11:10:51 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex17_top                                        ;
 ; Top-level Entity Name           ; ex17_top                                        ;
@@ -2104,7 +2104,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 0.79 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.80 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2113,10 +2113,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/gsp14/VERI_EIE2/part_4/ex_17/output_files/ex17_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 2744 megabytes
-    Info: Processing ended: Tue Dec 06 11:02:58 2016
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:06
+    Info: Peak virtual memory: 2748 megabytes
+    Info: Processing ended: Tue Dec 06 11:10:51 2016
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:07
 
 
 +----------------------------+

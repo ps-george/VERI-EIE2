@@ -42,7 +42,7 @@ module ex17_top (CLOCK_50, SW, HEX0, HEX1, HEX2,
 		.adc_sck (ADC_SCK),
 		.sdata_from_adc (ADC_SDO));		
 					
-	delay DELAY (CLOCK_50,tick_10k, data_in, data_out);	// do some processing on the data
+	delay DELAY (CLOCK_50, data_in, data_out);	// do some processing on the data
 	
 	hex_to_7seg		SEG0 (HEX0, data_in[3:0]);			
 	hex_to_7seg		SEG1 (HEX1, data_in[7:4]);			

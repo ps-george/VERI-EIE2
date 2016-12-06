@@ -1,5 +1,5 @@
 Flow report for ex17_top
-Tue Dec 06 11:03:12 2016
+Tue Dec 06 11:11:05 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Dec 06 11:03:05 2016           ;
+; Flow Status                     ; Successful - Tue Dec 06 11:10:58 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex17_top                                        ;
 ; Top-level Entity Name           ; ex17_top                                        ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/06/2016 11:02:11 ;
+; Start date & time ; 12/06/2016 11:10:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ex17_top            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248564268248.148102213106912       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564268248.148102260307604       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; FIFO_bb.v                             ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 909 MB              ; 00:00:20                           ;
-; Fitter                    ; 00:00:36     ; 1.0                     ; 2744 MB             ; 00:01:06                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 902 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 1241 MB             ; 00:00:07                           ;
-; Total                     ; 00:00:59     ; --                      ; --                  ; 00:01:39                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 925 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:37     ; 1.0                     ; 2748 MB             ; 00:01:07                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 900 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 1238 MB             ; 00:00:06                           ;
+; Total                     ; 00:00:59     ; --                      ; --                  ; 00:01:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

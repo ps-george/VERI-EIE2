@@ -10,36 +10,36 @@ SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
-HEX0[0] << hex_to_7seg:SEG0.port0
-HEX0[1] << hex_to_7seg:SEG0.port0
-HEX0[2] << hex_to_7seg:SEG0.port0
-HEX0[3] << hex_to_7seg:SEG0.port0
-HEX0[4] << hex_to_7seg:SEG0.port0
-HEX0[5] << hex_to_7seg:SEG0.port0
-HEX0[6] << hex_to_7seg:SEG0.port0
-HEX1[0] << hex_to_7seg:SEG1.port0
-HEX1[1] << hex_to_7seg:SEG1.port0
-HEX1[2] << hex_to_7seg:SEG1.port0
-HEX1[3] << hex_to_7seg:SEG1.port0
-HEX1[4] << hex_to_7seg:SEG1.port0
-HEX1[5] << hex_to_7seg:SEG1.port0
-HEX1[6] << hex_to_7seg:SEG1.port0
-HEX2[0] << hex_to_7seg:SEG2.port0
-HEX2[1] << hex_to_7seg:SEG2.port0
-HEX2[2] << hex_to_7seg:SEG2.port0
-HEX2[3] << hex_to_7seg:SEG2.port0
-HEX2[4] << hex_to_7seg:SEG2.port0
-HEX2[5] << hex_to_7seg:SEG2.port0
-HEX2[6] << hex_to_7seg:SEG2.port0
-DAC_SDI << spi2dac:SPI_DAC.port3
-DAC_SCK << spi2dac:SPI_DAC.port5
-DAC_CS << spi2dac:SPI_DAC.port4
-DAC_LD << spi2dac:SPI_DAC.port6
-ADC_SDI << spi2adc:SPI_ADC.sdata_to_adc
-ADC_SCK << spi2adc:SPI_ADC.adc_sck
-ADC_CS << spi2adc:SPI_ADC.adc_cs
+HEX0[0] <= hex_to_7seg:SEG0.port0
+HEX0[1] <= hex_to_7seg:SEG0.port0
+HEX0[2] <= hex_to_7seg:SEG0.port0
+HEX0[3] <= hex_to_7seg:SEG0.port0
+HEX0[4] <= hex_to_7seg:SEG0.port0
+HEX0[5] <= hex_to_7seg:SEG0.port0
+HEX0[6] <= hex_to_7seg:SEG0.port0
+HEX1[0] <= hex_to_7seg:SEG1.port0
+HEX1[1] <= hex_to_7seg:SEG1.port0
+HEX1[2] <= hex_to_7seg:SEG1.port0
+HEX1[3] <= hex_to_7seg:SEG1.port0
+HEX1[4] <= hex_to_7seg:SEG1.port0
+HEX1[5] <= hex_to_7seg:SEG1.port0
+HEX1[6] <= hex_to_7seg:SEG1.port0
+HEX2[0] <= hex_to_7seg:SEG2.port0
+HEX2[1] <= hex_to_7seg:SEG2.port0
+HEX2[2] <= hex_to_7seg:SEG2.port0
+HEX2[3] <= hex_to_7seg:SEG2.port0
+HEX2[4] <= hex_to_7seg:SEG2.port0
+HEX2[5] <= hex_to_7seg:SEG2.port0
+HEX2[6] <= hex_to_7seg:SEG2.port0
+DAC_SDI <= spi2dac:SPI_DAC.port3
+DAC_SCK <= spi2dac:SPI_DAC.port5
+DAC_CS <= spi2dac:SPI_DAC.port4
+DAC_LD <= spi2dac:SPI_DAC.port6
+ADC_SDI <= spi2adc:SPI_ADC.sdata_to_adc
+ADC_SCK <= spi2adc:SPI_ADC.adc_sck
+ADC_CS <= spi2adc:SPI_ADC.adc_cs
 ADC_SDO => ADC_SDO.IN1
-PWM_OUT << pwm:PWM_DC.port3
+PWM_OUT <= pwm:PWM_DC.port3
 
 
 |ex17_top|clktick_16:GEN_10K
@@ -201,7 +201,6 @@ sdata_from_adc => shift_reg[0].DATAIN
 
 |ex17_top|delay:DELAY
 sysclk => sysclk.IN1
-tick => ~NO_FANOUT~
 data_in[0] => Add0.IN20
 data_in[1] => Add0.IN19
 data_in[2] => Add0.IN18

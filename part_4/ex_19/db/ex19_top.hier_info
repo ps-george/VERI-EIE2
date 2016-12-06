@@ -1,0 +1,1186 @@
+|ex19_top
+CLOCK_50 => CLOCK_50.IN5
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => ~NO_FANOUT~
+HEX0[0] <= hex_to_7seg:SEG0.port0
+HEX0[1] <= hex_to_7seg:SEG0.port0
+HEX0[2] <= hex_to_7seg:SEG0.port0
+HEX0[3] <= hex_to_7seg:SEG0.port0
+HEX0[4] <= hex_to_7seg:SEG0.port0
+HEX0[5] <= hex_to_7seg:SEG0.port0
+HEX0[6] <= hex_to_7seg:SEG0.port0
+HEX1[0] <= hex_to_7seg:SEG1.port0
+HEX1[1] <= hex_to_7seg:SEG1.port0
+HEX1[2] <= hex_to_7seg:SEG1.port0
+HEX1[3] <= hex_to_7seg:SEG1.port0
+HEX1[4] <= hex_to_7seg:SEG1.port0
+HEX1[5] <= hex_to_7seg:SEG1.port0
+HEX1[6] <= hex_to_7seg:SEG1.port0
+HEX2[0] <= hex_to_7seg:SEG2.port0
+HEX2[1] <= hex_to_7seg:SEG2.port0
+HEX2[2] <= hex_to_7seg:SEG2.port0
+HEX2[3] <= hex_to_7seg:SEG2.port0
+HEX2[4] <= hex_to_7seg:SEG2.port0
+HEX2[5] <= hex_to_7seg:SEG2.port0
+HEX2[6] <= hex_to_7seg:SEG2.port0
+HEX3[0] <= hex_to_7seg:SEG3.port0
+HEX3[1] <= hex_to_7seg:SEG3.port0
+HEX3[2] <= hex_to_7seg:SEG3.port0
+HEX3[3] <= hex_to_7seg:SEG3.port0
+HEX3[4] <= hex_to_7seg:SEG3.port0
+HEX3[5] <= hex_to_7seg:SEG3.port0
+HEX3[6] <= hex_to_7seg:SEG3.port0
+HEX4[0] <= hex_to_7seg:SEG4.port0
+HEX4[1] <= hex_to_7seg:SEG4.port0
+HEX4[2] <= hex_to_7seg:SEG4.port0
+HEX4[3] <= hex_to_7seg:SEG4.port0
+HEX4[4] <= hex_to_7seg:SEG4.port0
+HEX4[5] <= hex_to_7seg:SEG4.port0
+HEX4[6] <= hex_to_7seg:SEG4.port0
+DAC_SDI <= spi2dac:SPI_DAC.port3
+DAC_SCK <= spi2dac:SPI_DAC.port5
+DAC_CS <= spi2dac:SPI_DAC.port4
+DAC_LD <= spi2dac:SPI_DAC.port6
+ADC_SDI <= spi2adc:SPI_ADC.sdata_to_adc
+ADC_SCK <= spi2adc:SPI_ADC.adc_sck
+ADC_CS <= spi2adc:SPI_ADC.adc_cs
+ADC_SDO => ADC_SDO.IN1
+PWM_OUT <= pwm:PWM_DC.port3
+
+
+|ex19_top|clktick_16:GEN_10K
+clkin => count[0].CLK
+clkin => count[1].CLK
+clkin => count[2].CLK
+clkin => count[3].CLK
+clkin => count[4].CLK
+clkin => count[5].CLK
+clkin => count[6].CLK
+clkin => count[7].CLK
+clkin => count[8].CLK
+clkin => count[9].CLK
+clkin => count[10].CLK
+clkin => count[11].CLK
+clkin => count[12].CLK
+clkin => count[13].CLK
+clkin => count[14].CLK
+clkin => count[15].CLK
+clkin => tick~reg0.CLK
+enable => count[0].ENA
+enable => count[1].ENA
+enable => count[2].ENA
+enable => count[3].ENA
+enable => count[4].ENA
+enable => count[5].ENA
+enable => count[6].ENA
+enable => count[7].ENA
+enable => count[8].ENA
+enable => count[9].ENA
+enable => count[10].ENA
+enable => count[11].ENA
+enable => count[12].ENA
+enable => count[13].ENA
+enable => count[14].ENA
+enable => count[15].ENA
+enable => tick~reg0.ENA
+N[0] => count.DATAB
+N[1] => count.DATAB
+N[2] => count.DATAB
+N[3] => count.DATAB
+N[4] => count.DATAB
+N[5] => count.DATAB
+N[6] => count.DATAB
+N[7] => count.DATAB
+N[8] => count.DATAB
+N[9] => count.DATAB
+N[10] => count.DATAB
+N[11] => count.DATAB
+N[12] => count.DATAB
+N[13] => count.DATAB
+N[14] => count.DATAB
+N[15] => count.DATAB
+tick <= tick~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|spi2dac:SPI_DAC
+clk => dac_start.CLK
+clk => clk_1MHz.CLK
+clk => ctr[0].CLK
+clk => ctr[1].CLK
+clk => ctr[2].CLK
+clk => ctr[3].CLK
+clk => ctr[4].CLK
+clk => sr_state~1.DATAIN
+data_in[0] => shift_reg.DATAB
+data_in[1] => shift_reg.DATAB
+data_in[2] => shift_reg.DATAB
+data_in[3] => shift_reg.DATAB
+data_in[4] => shift_reg.DATAB
+data_in[5] => shift_reg.DATAB
+data_in[6] => shift_reg.DATAB
+data_in[7] => shift_reg.DATAB
+data_in[8] => shift_reg.DATAB
+data_in[9] => shift_reg.DATAB
+load => Selector1.IN1
+load => dac_start.OUTPUTSELECT
+load => Selector0.IN1
+dac_sdi <= shift_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+dac_cs <= dac_cs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dac_sck <= dac_sck.DB_MAX_OUTPUT_PORT_TYPE
+dac_ld <= dac_ld~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|pwm:PWM_DC
+clk => pwm_out~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+clk => d[3].CLK
+clk => d[4].CLK
+clk => d[5].CLK
+clk => d[6].CLK
+clk => d[7].CLK
+clk => d[8].CLK
+clk => d[9].CLK
+data_in[0] => d[0].DATAIN
+data_in[1] => d[1].DATAIN
+data_in[2] => d[2].DATAIN
+data_in[3] => d[3].DATAIN
+data_in[4] => d[4].DATAIN
+data_in[5] => d[5].DATAIN
+data_in[6] => d[6].DATAIN
+data_in[7] => d[7].DATAIN
+data_in[8] => d[8].DATAIN
+data_in[9] => d[9].DATAIN
+load => d[0].ENA
+load => d[1].ENA
+load => d[2].ENA
+load => d[3].ENA
+load => d[4].ENA
+load => d[5].ENA
+load => d[6].ENA
+load => d[7].ENA
+load => d[8].ENA
+load => d[9].ENA
+pwm_out <= pwm_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|spi2adc:SPI_ADC
+sysclk => adc_start.CLK
+sysclk => clk_1MHz.CLK
+sysclk => ctr[0].CLK
+sysclk => ctr[1].CLK
+sysclk => ctr[2].CLK
+sysclk => ctr[3].CLK
+sysclk => ctr[4].CLK
+sysclk => sr_state~1.DATAIN
+start => Selector1.IN1
+start => adc_start.OUTPUTSELECT
+start => Selector0.IN1
+channel => Selector6.IN6
+data_from_adc[0] <= data_from_adc[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[1] <= data_from_adc[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[2] <= data_from_adc[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[3] <= data_from_adc[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[4] <= data_from_adc[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[5] <= data_from_adc[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[6] <= data_from_adc[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[7] <= data_from_adc[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[8] <= data_from_adc[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_from_adc[9] <= data_from_adc[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_valid <= adc_cs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sdata_to_adc <= adc_din.DB_MAX_OUTPUT_PORT_TYPE
+adc_cs <= adc_cs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+adc_sck <= adc_sck.DB_MAX_OUTPUT_PORT_TYPE
+sdata_from_adc => shift_reg[0].DATAIN
+
+
+|ex19_top|var_delay:VARIABLE_DELAY
+sysclk => sysclk.IN2
+valid => valid.IN1
+rdelay[0] => rdelay[0].IN1
+rdelay[1] => rdelay[1].IN1
+rdelay[2] => rdelay[2].IN1
+rdelay[3] => rdelay[3].IN1
+rdelay[4] => rdelay[4].IN1
+rdelay[5] => rdelay[5].IN1
+rdelay[6] => rdelay[6].IN1
+rdelay[7] => rdelay[7].IN1
+rdelay[8] => rdelay[8].IN1
+data_in[0] => Add0.IN20
+data_in[1] => Add0.IN19
+data_in[2] => Add0.IN18
+data_in[3] => Add0.IN17
+data_in[4] => Add0.IN16
+data_in[5] => Add0.IN15
+data_in[6] => Add0.IN14
+data_in[7] => Add0.IN13
+data_in[8] => Add0.IN12
+data_in[9] => Add0.IN11
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|var_delay:VARIABLE_DELAY|pulse_gen:PULSE
+pulse <= pulse~reg0.DB_MAX_OUTPUT_PORT_TYPE
+in => pulse.DATAB
+in => Selector0.IN1
+in => state.IDLE.DATAIN
+clk => pulse~reg0.CLK
+clk => state~1.DATAIN
+
+
+|ex19_top|var_delay:VARIABLE_DELAY|delay_ram:DELAY
+clock => clock.IN1
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+data[8] => data[8].IN1
+rdaddress[0] => rdaddress[0].IN1
+rdaddress[1] => rdaddress[1].IN1
+rdaddress[2] => rdaddress[2].IN1
+rdaddress[3] => rdaddress[3].IN1
+rdaddress[4] => rdaddress[4].IN1
+rdaddress[5] => rdaddress[5].IN1
+rdaddress[6] => rdaddress[6].IN1
+rdaddress[7] => rdaddress[7].IN1
+rdaddress[8] => rdaddress[8].IN1
+rdaddress[9] => rdaddress[9].IN1
+rdaddress[10] => rdaddress[10].IN1
+rdaddress[11] => rdaddress[11].IN1
+rdaddress[12] => rdaddress[12].IN1
+rden => rden.IN1
+wraddress[0] => wraddress[0].IN1
+wraddress[1] => wraddress[1].IN1
+wraddress[2] => wraddress[2].IN1
+wraddress[3] => wraddress[3].IN1
+wraddress[4] => wraddress[4].IN1
+wraddress[5] => wraddress[5].IN1
+wraddress[6] => wraddress[6].IN1
+wraddress[7] => wraddress[7].IN1
+wraddress[8] => wraddress[8].IN1
+wraddress[9] => wraddress[9].IN1
+wraddress[10] => wraddress[10].IN1
+wraddress[11] => wraddress[11].IN1
+wraddress[12] => wraddress[12].IN1
+wren => wren.IN1
+q[0] <= altsyncram:altsyncram_component.q_b
+q[1] <= altsyncram:altsyncram_component.q_b
+q[2] <= altsyncram:altsyncram_component.q_b
+q[3] <= altsyncram:altsyncram_component.q_b
+q[4] <= altsyncram:altsyncram_component.q_b
+q[5] <= altsyncram:altsyncram_component.q_b
+q[6] <= altsyncram:altsyncram_component.q_b
+q[7] <= altsyncram:altsyncram_component.q_b
+q[8] <= altsyncram:altsyncram_component.q_b
+
+
+|ex19_top|var_delay:VARIABLE_DELAY|delay_ram:DELAY|altsyncram:altsyncram_component
+wren_a => altsyncram_ip02:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => altsyncram_ip02:auto_generated.rden_b
+data_a[0] => altsyncram_ip02:auto_generated.data_a[0]
+data_a[1] => altsyncram_ip02:auto_generated.data_a[1]
+data_a[2] => altsyncram_ip02:auto_generated.data_a[2]
+data_a[3] => altsyncram_ip02:auto_generated.data_a[3]
+data_a[4] => altsyncram_ip02:auto_generated.data_a[4]
+data_a[5] => altsyncram_ip02:auto_generated.data_a[5]
+data_a[6] => altsyncram_ip02:auto_generated.data_a[6]
+data_a[7] => altsyncram_ip02:auto_generated.data_a[7]
+data_a[8] => altsyncram_ip02:auto_generated.data_a[8]
+data_b[0] => ~NO_FANOUT~
+data_b[1] => ~NO_FANOUT~
+data_b[2] => ~NO_FANOUT~
+data_b[3] => ~NO_FANOUT~
+data_b[4] => ~NO_FANOUT~
+data_b[5] => ~NO_FANOUT~
+data_b[6] => ~NO_FANOUT~
+data_b[7] => ~NO_FANOUT~
+data_b[8] => ~NO_FANOUT~
+address_a[0] => altsyncram_ip02:auto_generated.address_a[0]
+address_a[1] => altsyncram_ip02:auto_generated.address_a[1]
+address_a[2] => altsyncram_ip02:auto_generated.address_a[2]
+address_a[3] => altsyncram_ip02:auto_generated.address_a[3]
+address_a[4] => altsyncram_ip02:auto_generated.address_a[4]
+address_a[5] => altsyncram_ip02:auto_generated.address_a[5]
+address_a[6] => altsyncram_ip02:auto_generated.address_a[6]
+address_a[7] => altsyncram_ip02:auto_generated.address_a[7]
+address_a[8] => altsyncram_ip02:auto_generated.address_a[8]
+address_a[9] => altsyncram_ip02:auto_generated.address_a[9]
+address_a[10] => altsyncram_ip02:auto_generated.address_a[10]
+address_a[11] => altsyncram_ip02:auto_generated.address_a[11]
+address_a[12] => altsyncram_ip02:auto_generated.address_a[12]
+address_b[0] => altsyncram_ip02:auto_generated.address_b[0]
+address_b[1] => altsyncram_ip02:auto_generated.address_b[1]
+address_b[2] => altsyncram_ip02:auto_generated.address_b[2]
+address_b[3] => altsyncram_ip02:auto_generated.address_b[3]
+address_b[4] => altsyncram_ip02:auto_generated.address_b[4]
+address_b[5] => altsyncram_ip02:auto_generated.address_b[5]
+address_b[6] => altsyncram_ip02:auto_generated.address_b[6]
+address_b[7] => altsyncram_ip02:auto_generated.address_b[7]
+address_b[8] => altsyncram_ip02:auto_generated.address_b[8]
+address_b[9] => altsyncram_ip02:auto_generated.address_b[9]
+address_b[10] => altsyncram_ip02:auto_generated.address_b[10]
+address_b[11] => altsyncram_ip02:auto_generated.address_b[11]
+address_b[12] => altsyncram_ip02:auto_generated.address_b[12]
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_ip02:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= <GND>
+q_a[1] <= <GND>
+q_a[2] <= <GND>
+q_a[3] <= <GND>
+q_a[4] <= <GND>
+q_a[5] <= <GND>
+q_a[6] <= <GND>
+q_a[7] <= <GND>
+q_a[8] <= <GND>
+q_b[0] <= altsyncram_ip02:auto_generated.q_b[0]
+q_b[1] <= altsyncram_ip02:auto_generated.q_b[1]
+q_b[2] <= altsyncram_ip02:auto_generated.q_b[2]
+q_b[3] <= altsyncram_ip02:auto_generated.q_b[3]
+q_b[4] <= altsyncram_ip02:auto_generated.q_b[4]
+q_b[5] <= altsyncram_ip02:auto_generated.q_b[5]
+q_b[6] <= altsyncram_ip02:auto_generated.q_b[6]
+q_b[7] <= altsyncram_ip02:auto_generated.q_b[7]
+q_b[8] <= altsyncram_ip02:auto_generated.q_b[8]
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|ex19_top|var_delay:VARIABLE_DELAY|delay_ram:DELAY|altsyncram:altsyncram_component|altsyncram_ip02:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[0] => ram_block1a8.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[1] => ram_block1a8.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[2] => ram_block1a8.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[3] => ram_block1a8.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+address_a[4] => ram_block1a8.PORTAADDR4
+address_a[5] => ram_block1a0.PORTAADDR5
+address_a[5] => ram_block1a1.PORTAADDR5
+address_a[5] => ram_block1a2.PORTAADDR5
+address_a[5] => ram_block1a3.PORTAADDR5
+address_a[5] => ram_block1a4.PORTAADDR5
+address_a[5] => ram_block1a5.PORTAADDR5
+address_a[5] => ram_block1a6.PORTAADDR5
+address_a[5] => ram_block1a7.PORTAADDR5
+address_a[5] => ram_block1a8.PORTAADDR5
+address_a[6] => ram_block1a0.PORTAADDR6
+address_a[6] => ram_block1a1.PORTAADDR6
+address_a[6] => ram_block1a2.PORTAADDR6
+address_a[6] => ram_block1a3.PORTAADDR6
+address_a[6] => ram_block1a4.PORTAADDR6
+address_a[6] => ram_block1a5.PORTAADDR6
+address_a[6] => ram_block1a6.PORTAADDR6
+address_a[6] => ram_block1a7.PORTAADDR6
+address_a[6] => ram_block1a8.PORTAADDR6
+address_a[7] => ram_block1a0.PORTAADDR7
+address_a[7] => ram_block1a1.PORTAADDR7
+address_a[7] => ram_block1a2.PORTAADDR7
+address_a[7] => ram_block1a3.PORTAADDR7
+address_a[7] => ram_block1a4.PORTAADDR7
+address_a[7] => ram_block1a5.PORTAADDR7
+address_a[7] => ram_block1a6.PORTAADDR7
+address_a[7] => ram_block1a7.PORTAADDR7
+address_a[7] => ram_block1a8.PORTAADDR7
+address_a[8] => ram_block1a0.PORTAADDR8
+address_a[8] => ram_block1a1.PORTAADDR8
+address_a[8] => ram_block1a2.PORTAADDR8
+address_a[8] => ram_block1a3.PORTAADDR8
+address_a[8] => ram_block1a4.PORTAADDR8
+address_a[8] => ram_block1a5.PORTAADDR8
+address_a[8] => ram_block1a6.PORTAADDR8
+address_a[8] => ram_block1a7.PORTAADDR8
+address_a[8] => ram_block1a8.PORTAADDR8
+address_a[9] => ram_block1a0.PORTAADDR9
+address_a[9] => ram_block1a1.PORTAADDR9
+address_a[9] => ram_block1a2.PORTAADDR9
+address_a[9] => ram_block1a3.PORTAADDR9
+address_a[9] => ram_block1a4.PORTAADDR9
+address_a[9] => ram_block1a5.PORTAADDR9
+address_a[9] => ram_block1a6.PORTAADDR9
+address_a[9] => ram_block1a7.PORTAADDR9
+address_a[9] => ram_block1a8.PORTAADDR9
+address_a[10] => ram_block1a0.PORTAADDR10
+address_a[10] => ram_block1a1.PORTAADDR10
+address_a[10] => ram_block1a2.PORTAADDR10
+address_a[10] => ram_block1a3.PORTAADDR10
+address_a[10] => ram_block1a4.PORTAADDR10
+address_a[10] => ram_block1a5.PORTAADDR10
+address_a[10] => ram_block1a6.PORTAADDR10
+address_a[10] => ram_block1a7.PORTAADDR10
+address_a[10] => ram_block1a8.PORTAADDR10
+address_a[11] => ram_block1a0.PORTAADDR11
+address_a[11] => ram_block1a1.PORTAADDR11
+address_a[11] => ram_block1a2.PORTAADDR11
+address_a[11] => ram_block1a3.PORTAADDR11
+address_a[11] => ram_block1a4.PORTAADDR11
+address_a[11] => ram_block1a5.PORTAADDR11
+address_a[11] => ram_block1a6.PORTAADDR11
+address_a[11] => ram_block1a7.PORTAADDR11
+address_a[11] => ram_block1a8.PORTAADDR11
+address_a[12] => ram_block1a0.PORTAADDR12
+address_a[12] => ram_block1a1.PORTAADDR12
+address_a[12] => ram_block1a2.PORTAADDR12
+address_a[12] => ram_block1a3.PORTAADDR12
+address_a[12] => ram_block1a4.PORTAADDR12
+address_a[12] => ram_block1a5.PORTAADDR12
+address_a[12] => ram_block1a6.PORTAADDR12
+address_a[12] => ram_block1a7.PORTAADDR12
+address_a[12] => ram_block1a8.PORTAADDR12
+address_b[0] => ram_block1a0.PORTBADDR
+address_b[0] => ram_block1a1.PORTBADDR
+address_b[0] => ram_block1a2.PORTBADDR
+address_b[0] => ram_block1a3.PORTBADDR
+address_b[0] => ram_block1a4.PORTBADDR
+address_b[0] => ram_block1a5.PORTBADDR
+address_b[0] => ram_block1a6.PORTBADDR
+address_b[0] => ram_block1a7.PORTBADDR
+address_b[0] => ram_block1a8.PORTBADDR
+address_b[1] => ram_block1a0.PORTBADDR1
+address_b[1] => ram_block1a1.PORTBADDR1
+address_b[1] => ram_block1a2.PORTBADDR1
+address_b[1] => ram_block1a3.PORTBADDR1
+address_b[1] => ram_block1a4.PORTBADDR1
+address_b[1] => ram_block1a5.PORTBADDR1
+address_b[1] => ram_block1a6.PORTBADDR1
+address_b[1] => ram_block1a7.PORTBADDR1
+address_b[1] => ram_block1a8.PORTBADDR1
+address_b[2] => ram_block1a0.PORTBADDR2
+address_b[2] => ram_block1a1.PORTBADDR2
+address_b[2] => ram_block1a2.PORTBADDR2
+address_b[2] => ram_block1a3.PORTBADDR2
+address_b[2] => ram_block1a4.PORTBADDR2
+address_b[2] => ram_block1a5.PORTBADDR2
+address_b[2] => ram_block1a6.PORTBADDR2
+address_b[2] => ram_block1a7.PORTBADDR2
+address_b[2] => ram_block1a8.PORTBADDR2
+address_b[3] => ram_block1a0.PORTBADDR3
+address_b[3] => ram_block1a1.PORTBADDR3
+address_b[3] => ram_block1a2.PORTBADDR3
+address_b[3] => ram_block1a3.PORTBADDR3
+address_b[3] => ram_block1a4.PORTBADDR3
+address_b[3] => ram_block1a5.PORTBADDR3
+address_b[3] => ram_block1a6.PORTBADDR3
+address_b[3] => ram_block1a7.PORTBADDR3
+address_b[3] => ram_block1a8.PORTBADDR3
+address_b[4] => ram_block1a0.PORTBADDR4
+address_b[4] => ram_block1a1.PORTBADDR4
+address_b[4] => ram_block1a2.PORTBADDR4
+address_b[4] => ram_block1a3.PORTBADDR4
+address_b[4] => ram_block1a4.PORTBADDR4
+address_b[4] => ram_block1a5.PORTBADDR4
+address_b[4] => ram_block1a6.PORTBADDR4
+address_b[4] => ram_block1a7.PORTBADDR4
+address_b[4] => ram_block1a8.PORTBADDR4
+address_b[5] => ram_block1a0.PORTBADDR5
+address_b[5] => ram_block1a1.PORTBADDR5
+address_b[5] => ram_block1a2.PORTBADDR5
+address_b[5] => ram_block1a3.PORTBADDR5
+address_b[5] => ram_block1a4.PORTBADDR5
+address_b[5] => ram_block1a5.PORTBADDR5
+address_b[5] => ram_block1a6.PORTBADDR5
+address_b[5] => ram_block1a7.PORTBADDR5
+address_b[5] => ram_block1a8.PORTBADDR5
+address_b[6] => ram_block1a0.PORTBADDR6
+address_b[6] => ram_block1a1.PORTBADDR6
+address_b[6] => ram_block1a2.PORTBADDR6
+address_b[6] => ram_block1a3.PORTBADDR6
+address_b[6] => ram_block1a4.PORTBADDR6
+address_b[6] => ram_block1a5.PORTBADDR6
+address_b[6] => ram_block1a6.PORTBADDR6
+address_b[6] => ram_block1a7.PORTBADDR6
+address_b[6] => ram_block1a8.PORTBADDR6
+address_b[7] => ram_block1a0.PORTBADDR7
+address_b[7] => ram_block1a1.PORTBADDR7
+address_b[7] => ram_block1a2.PORTBADDR7
+address_b[7] => ram_block1a3.PORTBADDR7
+address_b[7] => ram_block1a4.PORTBADDR7
+address_b[7] => ram_block1a5.PORTBADDR7
+address_b[7] => ram_block1a6.PORTBADDR7
+address_b[7] => ram_block1a7.PORTBADDR7
+address_b[7] => ram_block1a8.PORTBADDR7
+address_b[8] => ram_block1a0.PORTBADDR8
+address_b[8] => ram_block1a1.PORTBADDR8
+address_b[8] => ram_block1a2.PORTBADDR8
+address_b[8] => ram_block1a3.PORTBADDR8
+address_b[8] => ram_block1a4.PORTBADDR8
+address_b[8] => ram_block1a5.PORTBADDR8
+address_b[8] => ram_block1a6.PORTBADDR8
+address_b[8] => ram_block1a7.PORTBADDR8
+address_b[8] => ram_block1a8.PORTBADDR8
+address_b[9] => ram_block1a0.PORTBADDR9
+address_b[9] => ram_block1a1.PORTBADDR9
+address_b[9] => ram_block1a2.PORTBADDR9
+address_b[9] => ram_block1a3.PORTBADDR9
+address_b[9] => ram_block1a4.PORTBADDR9
+address_b[9] => ram_block1a5.PORTBADDR9
+address_b[9] => ram_block1a6.PORTBADDR9
+address_b[9] => ram_block1a7.PORTBADDR9
+address_b[9] => ram_block1a8.PORTBADDR9
+address_b[10] => ram_block1a0.PORTBADDR10
+address_b[10] => ram_block1a1.PORTBADDR10
+address_b[10] => ram_block1a2.PORTBADDR10
+address_b[10] => ram_block1a3.PORTBADDR10
+address_b[10] => ram_block1a4.PORTBADDR10
+address_b[10] => ram_block1a5.PORTBADDR10
+address_b[10] => ram_block1a6.PORTBADDR10
+address_b[10] => ram_block1a7.PORTBADDR10
+address_b[10] => ram_block1a8.PORTBADDR10
+address_b[11] => ram_block1a0.PORTBADDR11
+address_b[11] => ram_block1a1.PORTBADDR11
+address_b[11] => ram_block1a2.PORTBADDR11
+address_b[11] => ram_block1a3.PORTBADDR11
+address_b[11] => ram_block1a4.PORTBADDR11
+address_b[11] => ram_block1a5.PORTBADDR11
+address_b[11] => ram_block1a6.PORTBADDR11
+address_b[11] => ram_block1a7.PORTBADDR11
+address_b[11] => ram_block1a8.PORTBADDR11
+address_b[12] => ram_block1a0.PORTBADDR12
+address_b[12] => ram_block1a1.PORTBADDR12
+address_b[12] => ram_block1a2.PORTBADDR12
+address_b[12] => ram_block1a3.PORTBADDR12
+address_b[12] => ram_block1a4.PORTBADDR12
+address_b[12] => ram_block1a5.PORTBADDR12
+address_b[12] => ram_block1a6.PORTBADDR12
+address_b[12] => ram_block1a7.PORTBADDR12
+address_b[12] => ram_block1a8.PORTBADDR12
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a0.CLK1
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a1.CLK1
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a2.CLK1
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a3.CLK1
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a4.CLK1
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a5.CLK1
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a6.CLK1
+clock0 => ram_block1a7.CLK0
+clock0 => ram_block1a7.CLK1
+clock0 => ram_block1a8.CLK0
+clock0 => ram_block1a8.CLK1
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+data_a[3] => ram_block1a3.PORTADATAIN
+data_a[4] => ram_block1a4.PORTADATAIN
+data_a[5] => ram_block1a5.PORTADATAIN
+data_a[6] => ram_block1a6.PORTADATAIN
+data_a[7] => ram_block1a7.PORTADATAIN
+data_a[8] => ram_block1a8.PORTADATAIN
+q_b[0] <= ram_block1a0.PORTBDATAOUT
+q_b[1] <= ram_block1a1.PORTBDATAOUT
+q_b[2] <= ram_block1a2.PORTBDATAOUT
+q_b[3] <= ram_block1a3.PORTBDATAOUT
+q_b[4] <= ram_block1a4.PORTBDATAOUT
+q_b[5] <= ram_block1a5.PORTBDATAOUT
+q_b[6] <= ram_block1a6.PORTBDATAOUT
+q_b[7] <= ram_block1a7.PORTBDATAOUT
+q_b[8] <= ram_block1a8.PORTBDATAOUT
+rden_b => ram_block1a0.ENA1
+rden_b => ram_block1a1.ENA1
+rden_b => ram_block1a2.ENA1
+rden_b => ram_block1a3.ENA1
+rden_b => ram_block1a4.ENA1
+rden_b => ram_block1a5.ENA1
+rden_b => ram_block1a6.ENA1
+rden_b => ram_block1a7.ENA1
+rden_b => ram_block1a8.ENA1
+wren_a => ram_block1a0.PORTAWE
+wren_a => ram_block1a0.ENA0
+wren_a => ram_block1a1.PORTAWE
+wren_a => ram_block1a1.ENA0
+wren_a => ram_block1a2.PORTAWE
+wren_a => ram_block1a2.ENA0
+wren_a => ram_block1a3.PORTAWE
+wren_a => ram_block1a3.ENA0
+wren_a => ram_block1a4.PORTAWE
+wren_a => ram_block1a4.ENA0
+wren_a => ram_block1a5.PORTAWE
+wren_a => ram_block1a5.ENA0
+wren_a => ram_block1a6.PORTAWE
+wren_a => ram_block1a6.ENA0
+wren_a => ram_block1a7.PORTAWE
+wren_a => ram_block1a7.ENA0
+wren_a => ram_block1a8.PORTAWE
+wren_a => ram_block1a8.ENA0
+
+
+|ex19_top|bin2bcd_16:comb_5
+B[0] => BCD_0[0].DATAIN
+B[1] => w35[0].IN1
+B[2] => w30[0].IN1
+B[3] => w26[0].IN1
+B[4] => w22[0].IN1
+B[5] => w18[0].IN1
+B[6] => w15[0].IN1
+B[7] => w12[0].IN1
+B[8] => w9[0].IN1
+B[9] => w7[0].IN1
+B[10] => w5[0].IN1
+B[11] => w3[0].IN1
+B[12] => w2[0].IN1
+B[13] => w1[0].IN1
+B[14] => w1[1].IN1
+B[15] => w1[2].IN1
+BCD_0[0] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+BCD_0[1] <= add3_ge5:A35.port1
+BCD_0[2] <= add3_ge5:A35.port1
+BCD_0[3] <= add3_ge5:A35.port1
+BCD_1[0] <= add3_ge5:A35.port1
+BCD_1[1] <= add3_ge5:A34.port1
+BCD_1[2] <= add3_ge5:A34.port1
+BCD_1[3] <= add3_ge5:A34.port1
+BCD_2[0] <= add3_ge5:A34.port1
+BCD_2[1] <= add3_ge5:A33.port1
+BCD_2[2] <= add3_ge5:A33.port1
+BCD_2[3] <= add3_ge5:A33.port1
+BCD_3[0] <= add3_ge5:A33.port1
+BCD_3[1] <= add3_ge5:A32.port1
+BCD_3[2] <= add3_ge5:A32.port1
+BCD_3[3] <= add3_ge5:A32.port1
+BCD_4[0] <= add3_ge5:A32.port1
+BCD_4[1] <= add3_ge5:A31.port1
+BCD_4[2] <= add3_ge5:A31.port1
+BCD_4[3] <= add3_ge5:A31.port1
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A1
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A2
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A3
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A4
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A5
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A6
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A7
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A8
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A9
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A10
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A11
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A12
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A13
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A14
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A15
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A16
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A17
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A18
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A19
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A20
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A21
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A22
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A23
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A24
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A25
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A26
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A27
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A28
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A29
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A30
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A31
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A32
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A33
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A34
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|bin2bcd_16:comb_5|add3_ge5:A35
+w[0] => Decoder0.IN3
+w[1] => Decoder0.IN2
+w[2] => Decoder0.IN1
+w[3] => Decoder0.IN0
+a[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex19_top|hex_to_7seg:SEG0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex19_top|hex_to_7seg:SEG1
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex19_top|hex_to_7seg:SEG2
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex19_top|hex_to_7seg:SEG3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|ex19_top|hex_to_7seg:SEG4
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
