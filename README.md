@@ -6,7 +6,7 @@ This is the electronic logbook for the VERI lab in the Autumn Term of 2016 at Im
 
 The goals of this lab were to:
 
-1. Develop an understanding of digital design using a Hardware Description Language (HDL), specifically Verilog)
+1. Develop an understanding of digital design using a Hardware Description Language (HDL), specifically Verilog.
 2. 
 3.
 4.
