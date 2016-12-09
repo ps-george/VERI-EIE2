@@ -58,7 +58,9 @@ Default: Turn on another LED, increment state
 - 1000Hz / 500 = 2Hz (0.5s period)
 
 # Exercise 9
-
+- Create a new module named timer_16 clocked with 1ms clock
+- Modify FSM to add a new output to start the timing
+- Display timer_16 output on HEX diplay when it has been stopped
 
 
 

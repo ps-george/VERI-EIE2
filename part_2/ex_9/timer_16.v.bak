@@ -1,0 +1,45 @@
+
+
+module timer_16(
+	sysclk,
+	clock,  // clock input
+	sreset, // Synchronous reset
+	start,
+	stop,
+	count   // out
+);
+
+//------- Declare ports -------//
+
+	parameter BIT_SZ = 16;
+	input sysclk;
+	input clock;
+	input sreset;
+	input stop;
+	input start;
+	output count;
+// count needs to be declared as a reg
+	reg [BIT_SZ-1:0] count;
+	wire start;
+	wire stop;
+//----- always initialise storage elements such as D-FF
+	initial count = 0;
+//----- Main body of the module
+	reg state;
+	always @ (posedge sysclk) begin
+		if (start)
+			state <= 1;
+		if (stop)
+			state <= 0;
+	end
+	
+	always @ (posedge clock) begin
+		if (sreset == 1'b1) begin
+			count <= 1'b0;
+		end
+
+		if (state)
+			count <= count + 1;
+		
+	end
+endmodule

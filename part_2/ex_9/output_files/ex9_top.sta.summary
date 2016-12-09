@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'modulo_counter_16:TICK50M|tick'
+Slack : -3.655
+TNS   : -199.740
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.542
+TNS   : -109.919
+
+Type  : Slow 1100mV 85C Model Setup 'modulo_counter_16:TICK25K|tick'
+Slack : -2.198
+TNS   : -37.380
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'modulo_counter_16:TICK50M|tick'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'modulo_counter_16:TICK25K|tick'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.672
+TNS   : -30.231
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICK50M|tick'
+Slack : -0.394
+TNS   : -57.080
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICK25K|tick'
+Slack : -0.394
+TNS   : -15.355
+
+Type  : Slow 1100mV 0C Model Setup 'modulo_counter_16:TICK50M|tick'
+Slack : -3.726
+TNS   : -198.821
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.352
+TNS   : -102.904
+
+Type  : Slow 1100mV 0C Model Setup 'modulo_counter_16:TICK25K|tick'
+Slack : -2.158
+TNS   : -37.668
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'modulo_counter_16:TICK50M|tick'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'modulo_counter_16:TICK25K|tick'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.736
+TNS   : -27.956
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICK50M|tick'
+Slack : -0.394
+TNS   : -56.325
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICK25K|tick'
+Slack : -0.394
+TNS   : -15.342
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.054
+TNS   : -69.106
+
+Type  : Fast 1100mV 85C Model Setup 'modulo_counter_16:TICK50M|tick'
+Slack : -1.656
+TNS   : -88.504
+
+Type  : Fast 1100mV 85C Model Setup 'modulo_counter_16:TICK25K|tick'
+Slack : -1.051
+TNS   : -14.766
+
+Type  : Fast 1100mV 85C Model Hold 'modulo_counter_16:TICK50M|tick'
+Slack : -0.131
+TNS   : -0.140
+
+Type  : Fast 1100mV 85C Model Hold 'modulo_counter_16:TICK25K|tick'
+Slack : -0.004
+TNS   : -0.004
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.805
+TNS   : -21.454
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICK50M|tick'
+Slack : -0.069
+TNS   : -2.947
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICK25K|tick'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.547
+TNS   : -55.604
+
+Type  : Fast 1100mV 0C Model Setup 'modulo_counter_16:TICK50M|tick'
+Slack : -1.535
+TNS   : -79.142
+
+Type  : Fast 1100mV 0C Model Setup 'modulo_counter_16:TICK25K|tick'
+Slack : -0.917
+TNS   : -12.813
+
+Type  : Fast 1100mV 0C Model Hold 'modulo_counter_16:TICK50M|tick'
+Slack : -0.141
+TNS   : -1.007
+
+Type  : Fast 1100mV 0C Model Hold 'modulo_counter_16:TICK25K|tick'
+Slack : -0.054
+TNS   : -0.054
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.850
+TNS   : -25.236
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICK50M|tick'
+Slack : -0.017
+TNS   : -0.296
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICK25K|tick'
+Slack : 0.043
+TNS   : 0.000
+
+------------------------------------------------------------
