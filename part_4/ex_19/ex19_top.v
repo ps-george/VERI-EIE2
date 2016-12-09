@@ -32,9 +32,6 @@ module ex19_top (CLOCK_50, SW, HEX0, HEX1, HEX2, HEX3, HEX4,
 	wire [3:0]  BCD_0, BCD_1, BCD_2, BCD_3,BCD_4;
 	
 	clktick_16  GEN_10K (CLOCK_50, 1'b1, 16'd4999, tick_10k);  	// generate 10KHz sampling clock ticks
-	spi2dac SPI_DAC (CLOCK_50, data_out, tick_10k, 		// send processed sample to DAC
-					DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);		// order of signals matter
-	pwm PWM_DC(CLOCK_50, data_out, tick_10k, PWM_OUT);		// output via PWM - R-channel
 					
 	spi2adc SPI_ADC (												// perform a A-to-D conversion
 		.sysclk (CLOCK_50), 										// order of parameters do not matter
@@ -49,6 +46,9 @@ module ex19_top (CLOCK_50, SW, HEX0, HEX1, HEX2, HEX3, HEX4,
 					
 	var_delay VARIABLE_DELAY (CLOCK_50, data_valid, SW[8:0], data_in, data_out);	// do some processing on the data
 	
+	spi2dac SPI_DAC (CLOCK_50, data_out, tick_10k, 		// send processed sample to DAC
+					DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);		// order of signals matter
+	pwm PWM_DC(CLOCK_50, data_out, tick_10k, PWM_OUT);		// output via PWM - R-channel
 	
 	assign delay_val = SW[8:0]*10'd1628;
 	bin2bcd_16 (delay_val[19:9],BCD_0, BCD_1, BCD_2, BCD_3,BCD_4);

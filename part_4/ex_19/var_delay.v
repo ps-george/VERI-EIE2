@@ -19,26 +19,19 @@ module var_delay (sysclk, valid, rdelay, data_in, data_out);
 	parameter 		ADC_OFFSET = 10'h181;
 	parameter 		DAC_OFFSET = 10'h200;
 
-	wire FIFO_FULL;
 	wire PLS;
-	reg FIFO_FILLED;
-	reg COUNT;
+	reg [12:0] COUNT;
 	initial COUNT = 13'b0;
-	initial FIFO_FILLED = 1'b0;
 	assign x = data_in[9:0] - ADC_OFFSET;		// x is input in 2's complement
 	
 	// This part should include your own processing hardware 
 	// ... that takes x to produce y
 	// ... In this case, it is ALL PASS.
 	pulse_gen PULSE (.pulse(PLS), .in(valid), .clk(sysclk));
-	// FIFO
-	always @ (posedge sysclk) begin
-		if (FIFO_FULL)
-			FIFO_FILLED <= 1'b1;
-	end
+
 	
 	always @ (negedge valid) begin
-		COUNT <= COUNT + 1;
+		COUNT <= COUNT + 1'b1;
 	end
 	
 	delay_ram DELAY(
@@ -55,7 +48,9 @@ module var_delay (sysclk, valid, rdelay, data_in, data_out);
 	
 	//  Now clock y output with system clock
 	always @(posedge sysclk)
-		if (FIFO_FILLED)
+		if (rdelay == 0)
+			data_out <= x + DAC_OFFSET;
+		else
 			data_out <=  y + DAC_OFFSET;
 		
 endmodule

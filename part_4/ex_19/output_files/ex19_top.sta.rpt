@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for ex19_top
-Tue Dec 06 11:57:08 2016
+Fri Dec 09 09:59:19 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -100,14 +100,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.09        ;
+; Average used               ; 1.22        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.0%      ;
-;     Processor 3            ;   2.9%      ;
-;     Processor 4            ;   2.8%      ;
+;     Processor 2            ;   7.3%      ;
+;     Processor 3            ;   7.2%      ;
+;     Processor 4            ;   7.1%      ;
 +----------------------------+-------------+
 
 
@@ -117,6 +117,7 @@ agreement for further details.
 ; Clock Name               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                      ;
 +--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
 ; CLOCK_50                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                 ;
+; spi2adc:SPI_ADC|adc_cs   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2adc:SPI_ADC|adc_cs }   ;
 ; spi2adc:SPI_ADC|clk_1MHz ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2adc:SPI_ADC|clk_1MHz } ;
 ; spi2dac:SPI_DAC|clk_1MHz ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { spi2dac:SPI_DAC|clk_1MHz } ;
 +--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
@@ -127,9 +128,10 @@ agreement for further details.
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 333.33 MHz ; 333.33 MHz      ; CLOCK_50                 ;      ;
-; 399.84 MHz ; 399.84 MHz      ; spi2dac:SPI_DAC|clk_1MHz ;      ;
-; 421.23 MHz ; 421.23 MHz      ; spi2adc:SPI_ADC|clk_1MHz ;      ;
+; 161.0 MHz  ; 161.0 MHz       ; CLOCK_50                 ;      ;
+; 182.28 MHz ; 182.28 MHz      ; spi2adc:SPI_ADC|clk_1MHz ;      ;
+; 290.02 MHz ; 290.02 MHz      ; spi2adc:SPI_ADC|adc_cs   ;      ;
+; 384.91 MHz ; 384.91 MHz      ; spi2dac:SPI_DAC|clk_1MHz ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -145,9 +147,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; spi2dac:SPI_DAC|clk_1MHz ; -3.512 ; -27.565       ;
-; spi2adc:SPI_ADC|clk_1MHz ; -3.463 ; -17.222       ;
-; CLOCK_50                 ; -3.178 ; -71.801       ;
+; CLOCK_50                 ; -7.169 ; -1899.842     ;
+; spi2dac:SPI_DAC|clk_1MHz ; -3.740 ; -66.401       ;
+; spi2adc:SPI_ADC|clk_1MHz ; -3.334 ; -58.510       ;
+; spi2adc:SPI_ADC|adc_cs   ; -2.448 ; -33.913       ;
 +--------------------------+--------+---------------+
 
 
@@ -156,9 +159,10 @@ HTML report is unavailable in plain text report export.
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; CLOCK_50                 ; 0.392 ; 0.000         ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.731 ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.788 ; 0.000         ;
+; CLOCK_50                 ; 0.117 ; 0.000         ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.402 ; 0.000         ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.432 ; 0.000         ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.771 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
@@ -179,16 +183,18 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -0.704 ; -34.763       ;
-; spi2dac:SPI_DAC|clk_1MHz ; -0.394 ; -6.900        ;
-; spi2adc:SPI_ADC|clk_1MHz ; -0.394 ; -4.739        ;
+; CLOCK_50                 ; -2.174 ; -1356.058     ;
+; spi2adc:SPI_ADC|clk_1MHz ; -0.394 ; -17.046       ;
+; spi2dac:SPI_DAC|clk_1MHz ; -0.394 ; -13.783       ;
+; spi2adc:SPI_ADC|adc_cs   ; -0.394 ; -8.563        ;
 +--------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +----------------------------------------------------------------+
@@ -196,9 +202,10 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
 +------------+-----------------+--------------------------+------+
-; 323.42 MHz ; 323.42 MHz      ; CLOCK_50                 ;      ;
-; 400.48 MHz ; 400.48 MHz      ; spi2dac:SPI_DAC|clk_1MHz ;      ;
-; 423.37 MHz ; 423.37 MHz      ; spi2adc:SPI_ADC|clk_1MHz ;      ;
+; 162.02 MHz ; 162.02 MHz      ; CLOCK_50                 ;      ;
+; 191.79 MHz ; 191.79 MHz      ; spi2adc:SPI_ADC|clk_1MHz ;      ;
+; 285.71 MHz ; 285.71 MHz      ; spi2adc:SPI_ADC|adc_cs   ;      ;
+; 385.36 MHz ; 385.36 MHz      ; spi2dac:SPI_DAC|clk_1MHz ;      ;
 +------------+-----------------+--------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -208,21 +215,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; spi2dac:SPI_DAC|clk_1MHz ; -3.609 ; -28.324       ;
-; spi2adc:SPI_ADC|clk_1MHz ; -3.548 ; -17.653       ;
-; CLOCK_50                 ; -2.944 ; -69.777       ;
+; CLOCK_50                 ; -6.800 ; -1737.381     ;
+; spi2dac:SPI_DAC|clk_1MHz ; -3.909 ; -68.236       ;
+; spi2adc:SPI_ADC|clk_1MHz ; -3.430 ; -56.419       ;
+; spi2adc:SPI_ADC|adc_cs   ; -2.500 ; -34.211       ;
 +--------------------------+--------+---------------+
 
 
-+--------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                ;
-+--------------------------+-------+---------------+
-; Clock                    ; Slack ; End Point TNS ;
-+--------------------------+-------+---------------+
-; CLOCK_50                 ; 0.251 ; 0.000         ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.712 ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.789 ; 0.000         ;
-+--------------------------+-------+---------------+
++---------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                 ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLOCK_50                 ; -0.197 ; -0.487        ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.396  ; 0.000         ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.446  ; 0.000         ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.758  ; 0.000         ;
++--------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -242,16 +251,18 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -0.739 ; -32.108       ;
-; spi2dac:SPI_DAC|clk_1MHz ; -0.394 ; -6.835        ;
-; spi2adc:SPI_ADC|clk_1MHz ; -0.394 ; -4.688        ;
+; CLOCK_50                 ; -2.174 ; -1349.563     ;
+; spi2adc:SPI_ADC|clk_1MHz ; -0.394 ; -16.731       ;
+; spi2dac:SPI_DAC|clk_1MHz ; -0.394 ; -13.710       ;
+; spi2adc:SPI_ADC|adc_cs   ; -0.394 ; -8.658        ;
 +--------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +---------------------------------------------------+
@@ -259,9 +270,10 @@ No synchronizer chains to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -2.548 ; -30.753       ;
-; spi2dac:SPI_DAC|clk_1MHz ; -1.630 ; -11.801       ;
-; spi2adc:SPI_ADC|clk_1MHz ; -1.597 ; -7.238        ;
+; CLOCK_50                 ; -4.629 ; -1249.157     ;
+; spi2dac:SPI_DAC|clk_1MHz ; -1.747 ; -29.297       ;
+; spi2adc:SPI_ADC|clk_1MHz ; -1.530 ; -31.039       ;
+; spi2adc:SPI_ADC|adc_cs   ; -1.202 ; -16.415       ;
 +--------------------------+--------+---------------+
 
 
@@ -270,9 +282,10 @@ No synchronizer chains to report.
 +--------------------------+-------+---------------+
 ; Clock                    ; Slack ; End Point TNS ;
 +--------------------------+-------+---------------+
-; CLOCK_50                 ; 0.198 ; 0.000         ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.322 ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.337 ; 0.000         ;
+; CLOCK_50                 ; 0.078 ; 0.000         ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.160 ; 0.000         ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.294 ; 0.000         ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.336 ; 0.000         ;
 +--------------------------+-------+---------------+
 
 
@@ -293,16 +306,18 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -0.792 ; -24.464       ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.114  ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.116  ; 0.000         ;
+; CLOCK_50                 ; -2.174 ; -1362.303     ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.036  ; 0.000         ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.057  ; 0.000         ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.089  ; 0.000         ;
 +--------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +---------------------------------------------------+
@@ -310,21 +325,23 @@ No synchronizer chains to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -2.112 ; -24.620       ;
-; spi2dac:SPI_DAC|clk_1MHz ; -1.570 ; -11.030       ;
-; spi2adc:SPI_ADC|clk_1MHz ; -1.536 ; -6.667        ;
+; CLOCK_50                 ; -3.873 ; -1005.027     ;
+; spi2dac:SPI_DAC|clk_1MHz ; -1.674 ; -27.763       ;
+; spi2adc:SPI_ADC|clk_1MHz ; -1.475 ; -27.592       ;
+; spi2adc:SPI_ADC|adc_cs   ; -1.081 ; -14.505       ;
 +--------------------------+--------+---------------+
 
 
-+--------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                ;
-+--------------------------+-------+---------------+
-; Clock                    ; Slack ; End Point TNS ;
-+--------------------------+-------+---------------+
-; CLOCK_50                 ; 0.190 ; 0.000         ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.287 ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.310 ; 0.000         ;
-+--------------------------+-------+---------------+
++---------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                 ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLOCK_50                 ; -0.052 ; -0.067        ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.145  ; 0.000         ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.260  ; 0.000         ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.304  ; 0.000         ;
++--------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -344,32 +361,36 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; CLOCK_50                 ; -0.820 ; -28.915       ;
-; spi2dac:SPI_DAC|clk_1MHz ; 0.121  ; 0.000         ;
-; spi2adc:SPI_ADC|clk_1MHz ; 0.127  ; 0.000         ;
+; CLOCK_50                 ; -2.174 ; -1388.421     ;
+; spi2dac:SPI_DAC|clk_1MHz ; 0.062  ; 0.000         ;
+; spi2adc:SPI_ADC|clk_1MHz ; 0.077  ; 0.000         ;
+; spi2adc:SPI_ADC|adc_cs   ; 0.098  ; 0.000         ;
 +--------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+-----------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                     ;
-+---------------------------+----------+-------+----------+---------+---------------------+
-; Clock                     ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack          ; -3.609   ; 0.190 ; N/A      ; N/A     ; -0.820              ;
-;  CLOCK_50                 ; -3.178   ; 0.190 ; N/A      ; N/A     ; -0.820              ;
-;  spi2adc:SPI_ADC|clk_1MHz ; -3.548   ; 0.310 ; N/A      ; N/A     ; -0.394              ;
-;  spi2dac:SPI_DAC|clk_1MHz ; -3.609   ; 0.287 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS           ; -116.588 ; 0.0   ; 0.0      ; 0.0     ; -46.402             ;
-;  CLOCK_50                 ; -71.801  ; 0.000 ; N/A      ; N/A     ; -34.763             ;
-;  spi2adc:SPI_ADC|clk_1MHz ; -17.653  ; 0.000 ; N/A      ; N/A     ; -4.739              ;
-;  spi2dac:SPI_DAC|clk_1MHz ; -28.324  ; 0.000 ; N/A      ; N/A     ; -6.900              ;
-+---------------------------+----------+-------+----------+---------+---------------------+
+
++-------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                       ;
++---------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                     ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack          ; -7.169    ; -0.197 ; N/A      ; N/A     ; -2.174              ;
+;  CLOCK_50                 ; -7.169    ; -0.197 ; N/A      ; N/A     ; -2.174              ;
+;  spi2adc:SPI_ADC|adc_cs   ; -2.500    ; 0.145  ; N/A      ; N/A     ; -0.394              ;
+;  spi2adc:SPI_ADC|clk_1MHz ; -3.430    ; 0.260  ; N/A      ; N/A     ; -0.394              ;
+;  spi2dac:SPI_DAC|clk_1MHz ; -3.909    ; 0.304  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS           ; -2058.666 ; -0.487 ; 0.0      ; 0.0     ; -1395.45            ;
+;  CLOCK_50                 ; -1899.842 ; -0.487 ; N/A      ; N/A     ; -1388.421           ;
+;  spi2adc:SPI_ADC|adc_cs   ; -34.211   ; 0.000  ; N/A      ; N/A     ; -8.658              ;
+;  spi2adc:SPI_ADC|clk_1MHz ; -58.510   ; 0.000  ; N/A      ; N/A     ; -17.046             ;
+;  spi2dac:SPI_DAC|clk_1MHz ; -68.236   ; 0.000  ; N/A      ; N/A     ; -13.783             ;
++---------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -429,7 +450,6 @@ No synchronizer chains to report.
 ; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------+--------------+-----------------+-----------------+
 ; SW[9]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; ADC_SDO  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[0]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[1]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[2]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -440,6 +460,7 @@ No synchronizer chains to report.
 ; SW[7]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[8]    ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK_50 ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ADC_SDO  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +----------+--------------+-----------------+-----------------+
 
 
@@ -652,13 +673,16 @@ No synchronizer chains to report.
 +--------------------------+--------------------------+----------+----------+----------+----------+
 ; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
-; CLOCK_50                 ; CLOCK_50                 ; 482      ; 0        ; 0        ; 0        ;
-; spi2adc:SPI_ADC|clk_1MHz ; CLOCK_50                 ; 5        ; 1        ; 0        ; 0        ;
+; CLOCK_50                 ; CLOCK_50                 ; 1420     ; 0        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; CLOCK_50                 ; 564      ; 6        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|clk_1MHz ; CLOCK_50                 ; 3780     ; 1        ; 0        ; 0        ;
 ; spi2dac:SPI_DAC|clk_1MHz ; CLOCK_50                 ; 5        ; 1        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; spi2adc:SPI_ADC|adc_cs   ; 117      ; 0        ; 0        ; 0        ;
 ; CLOCK_50                 ; spi2adc:SPI_ADC|clk_1MHz ; 3        ; 0        ; 0        ; 0        ;
-; spi2adc:SPI_ADC|clk_1MHz ; spi2adc:SPI_ADC|clk_1MHz ; 35       ; 0        ; 0        ; 0        ;
-; CLOCK_50                 ; spi2dac:SPI_DAC|clk_1MHz ; 6        ; 0        ; 0        ; 0        ;
-; spi2dac:SPI_DAC|clk_1MHz ; spi2dac:SPI_DAC|clk_1MHz ; 41       ; 0        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; spi2adc:SPI_ADC|clk_1MHz ; 0        ; 0        ; 10       ; 10       ;
+; spi2adc:SPI_ADC|clk_1MHz ; spi2adc:SPI_ADC|clk_1MHz ; 57       ; 10       ; 10       ; 9        ;
+; CLOCK_50                 ; spi2dac:SPI_DAC|clk_1MHz ; 26       ; 0        ; 0        ; 0        ;
+; spi2dac:SPI_DAC|clk_1MHz ; spi2dac:SPI_DAC|clk_1MHz ; 70       ; 0        ; 0        ; 0        ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -668,13 +692,16 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------+--------------------------+----------+----------+----------+----------+
 ; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
-; CLOCK_50                 ; CLOCK_50                 ; 482      ; 0        ; 0        ; 0        ;
-; spi2adc:SPI_ADC|clk_1MHz ; CLOCK_50                 ; 5        ; 1        ; 0        ; 0        ;
+; CLOCK_50                 ; CLOCK_50                 ; 1420     ; 0        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; CLOCK_50                 ; 564      ; 6        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|clk_1MHz ; CLOCK_50                 ; 3780     ; 1        ; 0        ; 0        ;
 ; spi2dac:SPI_DAC|clk_1MHz ; CLOCK_50                 ; 5        ; 1        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; spi2adc:SPI_ADC|adc_cs   ; 117      ; 0        ; 0        ; 0        ;
 ; CLOCK_50                 ; spi2adc:SPI_ADC|clk_1MHz ; 3        ; 0        ; 0        ; 0        ;
-; spi2adc:SPI_ADC|clk_1MHz ; spi2adc:SPI_ADC|clk_1MHz ; 35       ; 0        ; 0        ; 0        ;
-; CLOCK_50                 ; spi2dac:SPI_DAC|clk_1MHz ; 6        ; 0        ; 0        ; 0        ;
-; spi2dac:SPI_DAC|clk_1MHz ; spi2dac:SPI_DAC|clk_1MHz ; 41       ; 0        ; 0        ; 0        ;
+; spi2adc:SPI_ADC|adc_cs   ; spi2adc:SPI_ADC|clk_1MHz ; 0        ; 0        ; 10       ; 10       ;
+; spi2adc:SPI_ADC|clk_1MHz ; spi2adc:SPI_ADC|clk_1MHz ; 57       ; 10       ; 10       ; 9        ;
+; CLOCK_50                 ; spi2dac:SPI_DAC|clk_1MHz ; 26       ; 0        ; 0        ; 0        ;
+; spi2dac:SPI_DAC|clk_1MHz ; spi2dac:SPI_DAC|clk_1MHz ; 70       ; 0        ; 0        ; 0        ;
 +--------------------------+--------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -698,8 +725,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 225   ; 225  ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 721   ; 721  ;
 ; Unconstrained Output Ports      ; 33    ; 33   ;
 ; Unconstrained Output Port Paths ; 235   ; 235  ;
 +---------------------------------+-------+------+
@@ -711,6 +738,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                   ; Clock                    ; Type ; Status      ;
 +--------------------------+--------------------------+------+-------------+
 ; CLOCK_50                 ; CLOCK_50                 ; Base ; Constrained ;
+; spi2adc:SPI_ADC|adc_cs   ; spi2adc:SPI_ADC|adc_cs   ; Base ; Constrained ;
 ; spi2adc:SPI_ADC|clk_1MHz ; spi2adc:SPI_ADC|clk_1MHz ; Base ; Constrained ;
 ; spi2dac:SPI_DAC|clk_1MHz ; spi2dac:SPI_DAC|clk_1MHz ; Base ; Constrained ;
 +--------------------------+--------------------------+------+-------------+
@@ -721,6 +749,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; ADC_SDO    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -779,6 +808,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; ADC_SDO    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -838,7 +868,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Tue Dec 06 11:57:03 2016
+    Info: Processing started: Fri Dec 09 09:59:12 2016
 Info: Command: quartus_sta ex19 -c ex19_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -849,116 +879,137 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'ex1
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
-    Info (332105): create_clock -period 1.000 -name spi2dac:SPI_DAC|clk_1MHz spi2dac:SPI_DAC|clk_1MHz
     Info (332105): create_clock -period 1.000 -name spi2adc:SPI_ADC|clk_1MHz spi2adc:SPI_ADC|clk_1MHz
+    Info (332105): create_clock -period 1.000 -name spi2adc:SPI_ADC|adc_cs spi2adc:SPI_ADC|adc_cs
+    Info (332105): create_clock -period 1.000 -name spi2dac:SPI_DAC|clk_1MHz spi2dac:SPI_DAC|clk_1MHz
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.512
+Info (332146): Worst-case setup slack is -7.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.512             -27.565 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -3.463             -17.222 spi2adc:SPI_ADC|clk_1MHz 
-    Info (332119):    -3.178             -71.801 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.392
+    Info (332119):    -7.169           -1899.842 CLOCK_50 
+    Info (332119):    -3.740             -66.401 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -3.334             -58.510 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.448             -33.913 spi2adc:SPI_ADC|adc_cs 
+Info (332146): Worst-case hold slack is 0.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.392               0.000 CLOCK_50 
-    Info (332119):     0.731               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.788               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.117               0.000 CLOCK_50 
+    Info (332119):     0.402               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.432               0.000 spi2adc:SPI_ADC|adc_cs 
+    Info (332119):     0.771               0.000 spi2dac:SPI_DAC|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.704
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.704             -34.763 CLOCK_50 
-    Info (332119):    -0.394              -6.900 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -0.394              -4.739 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.174           -1356.058 CLOCK_50 
+    Info (332119):    -0.394             -17.046 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -0.394             -13.783 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -0.394              -8.563 spi2adc:SPI_ADC|adc_cs 
+Info (332114): Report Metastability: Found 10 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.609
+Info (332146): Worst-case setup slack is -6.800
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.609             -28.324 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -3.548             -17.653 spi2adc:SPI_ADC|clk_1MHz 
-    Info (332119):    -2.944             -69.777 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.251
+    Info (332119):    -6.800           -1737.381 CLOCK_50 
+    Info (332119):    -3.909             -68.236 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -3.430             -56.419 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.500             -34.211 spi2adc:SPI_ADC|adc_cs 
+Info (332146): Worst-case hold slack is -0.197
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.251               0.000 CLOCK_50 
-    Info (332119):     0.712               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.789               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -0.197              -0.487 CLOCK_50 
+    Info (332119):     0.396               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.446               0.000 spi2adc:SPI_ADC|adc_cs 
+    Info (332119):     0.758               0.000 spi2dac:SPI_DAC|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.739
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.739             -32.108 CLOCK_50 
-    Info (332119):    -0.394              -6.835 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -0.394              -4.688 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.174           -1349.563 CLOCK_50 
+    Info (332119):    -0.394             -16.731 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -0.394             -13.710 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -0.394              -8.658 spi2adc:SPI_ADC|adc_cs 
+Info (332114): Report Metastability: Found 10 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.548
+Info (332146): Worst-case setup slack is -4.629
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.548             -30.753 CLOCK_50 
-    Info (332119):    -1.630             -11.801 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -1.597              -7.238 spi2adc:SPI_ADC|clk_1MHz 
-Info (332146): Worst-case hold slack is 0.198
+    Info (332119):    -4.629           -1249.157 CLOCK_50 
+    Info (332119):    -1.747             -29.297 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -1.530             -31.039 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -1.202             -16.415 spi2adc:SPI_ADC|adc_cs 
+Info (332146): Worst-case hold slack is 0.078
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.198               0.000 CLOCK_50 
-    Info (332119):     0.322               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.337               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.078               0.000 CLOCK_50 
+    Info (332119):     0.160               0.000 spi2adc:SPI_ADC|adc_cs 
+    Info (332119):     0.294               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.336               0.000 spi2dac:SPI_DAC|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.792
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.792             -24.464 CLOCK_50 
-    Info (332119):     0.114               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.116               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.174           -1362.303 CLOCK_50 
+    Info (332119):     0.036               0.000 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):     0.057               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.089               0.000 spi2adc:SPI_ADC|adc_cs 
+Info (332114): Report Metastability: Found 10 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.112
+Info (332146): Worst-case setup slack is -3.873
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.112             -24.620 CLOCK_50 
-    Info (332119):    -1.570             -11.030 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):    -1.536              -6.667 spi2adc:SPI_ADC|clk_1MHz 
-Info (332146): Worst-case hold slack is 0.190
+    Info (332119):    -3.873           -1005.027 CLOCK_50 
+    Info (332119):    -1.674             -27.763 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):    -1.475             -27.592 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -1.081             -14.505 spi2adc:SPI_ADC|adc_cs 
+Info (332146): Worst-case hold slack is -0.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.190               0.000 CLOCK_50 
-    Info (332119):     0.287               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.310               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -0.052              -0.067 CLOCK_50 
+    Info (332119):     0.145               0.000 spi2adc:SPI_ADC|adc_cs 
+    Info (332119):     0.260               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.304               0.000 spi2dac:SPI_DAC|clk_1MHz 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.820
+Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.820             -28.915 CLOCK_50 
-    Info (332119):     0.121               0.000 spi2dac:SPI_DAC|clk_1MHz 
-    Info (332119):     0.127               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):    -2.174           -1388.421 CLOCK_50 
+    Info (332119):     0.062               0.000 spi2dac:SPI_DAC|clk_1MHz 
+    Info (332119):     0.077               0.000 spi2adc:SPI_ADC|clk_1MHz 
+    Info (332119):     0.098               0.000 spi2adc:SPI_ADC|adc_cs 
+Info (332114): Report Metastability: Found 10 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1209 megabytes
-    Info: Processing ended: Tue Dec 06 11:57:08 2016
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 1239 megabytes
+    Info: Processing ended: Fri Dec 09 09:59:19 2016
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -2,148 +2,196 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -7.169
+TNS   : -1899.842
+
 Type  : Slow 1100mV 85C Model Setup 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -3.512
-TNS   : -27.565
+Slack : -3.740
+TNS   : -66.401
 
 Type  : Slow 1100mV 85C Model Setup 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : -3.463
-TNS   : -17.222
+Slack : -3.334
+TNS   : -58.510
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.178
-TNS   : -71.801
+Type  : Slow 1100mV 85C Model Setup 'spi2adc:SPI_ADC|adc_cs'
+Slack : -2.448
+TNS   : -33.913
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.392
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.731
+Slack : 0.117
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.788
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : 0.771
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.704
-TNS   : -34.763
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -0.394
-TNS   : -6.900
+Slack : -2.174
+TNS   : -1356.058
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'spi2adc:SPI_ADC|clk_1MHz'
 Slack : -0.394
-TNS   : -4.739
+TNS   : -17.046
 
-Type  : Slow 1100mV 0C Model Setup 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -3.609
-TNS   : -28.324
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : -0.394
+TNS   : -13.783
 
-Type  : Slow 1100mV 0C Model Setup 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : -3.548
-TNS   : -17.653
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'spi2adc:SPI_ADC|adc_cs'
+Slack : -0.394
+TNS   : -8.563
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.944
-TNS   : -69.777
+Slack : -6.800
+TNS   : -1737.381
+
+Type  : Slow 1100mV 0C Model Setup 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : -3.909
+TNS   : -68.236
+
+Type  : Slow 1100mV 0C Model Setup 'spi2adc:SPI_ADC|clk_1MHz'
+Slack : -3.430
+TNS   : -56.419
+
+Type  : Slow 1100mV 0C Model Setup 'spi2adc:SPI_ADC|adc_cs'
+Slack : -2.500
+TNS   : -34.211
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.251
+Slack : -0.197
+TNS   : -0.487
+
+Type  : Slow 1100mV 0C Model Hold 'spi2adc:SPI_ADC|clk_1MHz'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.712
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.789
+Slack : 0.758
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.739
-TNS   : -32.108
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -0.394
-TNS   : -6.835
+Slack : -2.174
+TNS   : -1349.563
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'spi2adc:SPI_ADC|clk_1MHz'
 Slack : -0.394
-TNS   : -4.688
+TNS   : -16.731
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : -0.394
+TNS   : -13.710
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'spi2adc:SPI_ADC|adc_cs'
+Slack : -0.394
+TNS   : -8.658
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.548
-TNS   : -30.753
+Slack : -4.629
+TNS   : -1249.157
 
 Type  : Fast 1100mV 85C Model Setup 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -1.630
-TNS   : -11.801
+Slack : -1.747
+TNS   : -29.297
 
 Type  : Fast 1100mV 85C Model Setup 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : -1.597
-TNS   : -7.238
+Slack : -1.530
+TNS   : -31.039
+
+Type  : Fast 1100mV 85C Model Setup 'spi2adc:SPI_ADC|adc_cs'
+Slack : -1.202
+TNS   : -16.415
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.198
+Slack : 0.078
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.322
+Type  : Fast 1100mV 85C Model Hold 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.160
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.337
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : 0.336
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.792
-TNS   : -24.464
+Slack : -2.174
+TNS   : -1362.303
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.114
+Slack : 0.036
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.116
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.089
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.112
-TNS   : -24.620
+Slack : -3.873
+TNS   : -1005.027
 
 Type  : Fast 1100mV 0C Model Setup 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : -1.570
-TNS   : -11.030
+Slack : -1.674
+TNS   : -27.763
 
 Type  : Fast 1100mV 0C Model Setup 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : -1.536
-TNS   : -6.667
+Slack : -1.475
+TNS   : -27.592
+
+Type  : Fast 1100mV 0C Model Setup 'spi2adc:SPI_ADC|adc_cs'
+Slack : -1.081
+TNS   : -14.505
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.190
-TNS   : 0.000
+Slack : -0.052
+TNS   : -0.067
 
-Type  : Fast 1100mV 0C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.287
+Type  : Fast 1100mV 0C Model Hold 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.145
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.310
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'spi2dac:SPI_DAC|clk_1MHz'
+Slack : 0.304
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.820
-TNS   : -28.915
+Slack : -2.174
+TNS   : -1388.421
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'spi2dac:SPI_DAC|clk_1MHz'
-Slack : 0.121
+Slack : 0.062
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'spi2adc:SPI_ADC|clk_1MHz'
-Slack : 0.127
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'spi2adc:SPI_ADC|adc_cs'
+Slack : 0.098
 TNS   : 0.000
 
 ------------------------------------------------------------
