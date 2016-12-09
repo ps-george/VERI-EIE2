@@ -1,4 +1,4 @@
-#Exercise 5
+# Exercise 5
 *Created new project and [./ex_5/counter_8.v](counter_8.v)
 `add wave clock enable
 add wave -hexadecimal count
@@ -7,7 +7,7 @@ force enable 1
 run 100ns
 ...`
 
-#Exercise 6
+# Exercise 6
 * [links to source code]
 * error with compiler needed space after .sdc code
 ## TimeQuest Timing Analyzer - Maximum clock frequency
@@ -22,14 +22,14 @@ Highest temperature: 444.84 MHz
 3) Why is the TimeQuest entry red, indicating that there may be a problem?
 The entry is red because data specifying timing constraints it not available for a number of the user-specified inputs.
 
-##FPGA resources
-###Explain results:
+## FPGA resources
+### Explain results:
 1. Pins.. 
 2. etc
 3. etc
 4. etc
 
-#Exercise 7
+# Exercise 7
 |Q6|Q5|Q4|Q3|Q2|Q1|Q0|count|
 |---|---|---|---|---|---|---|---|
 0|0|0|0|0|0|1|1
@@ -43,26 +43,21 @@ The entry is red because data specifying timing constraints it not available for
 1|1|1|1|1|0|1|(1)25
 1|1|1|1|0|1|0|(1)22
 
-#Exercise 8
-Default: Stay at current state.
+# Exercise 8
+Default: Turn on another LED, increment state
 |State descr| State  | Input required for next state  | Output |
 |---|---|---|---|
-|Wait| 0  | Trig=0  | en_lfsr = 1 |
-|Start| 1  | tick_hs |  |
-|LED ON| 2  | tick_hs | LED[0] = 1   |
-|LED ON| 3  | tick_hs | LED[1:0] = 1 |
-|LED ON| 4  | tick_hs | LED[2:0] = 1 |
-|LED ON| 5  | tick_hs | LED[3:0] = 1 |
-|LED ON| 6  | tick_hs | LED[4:0] = 1 |
-|LED ON| 7  | tick_hs | LED[5:0] = 1 |
-|LED ON| 8  | tick_hs | LED[6:0] = 1 |
-|LED ON| 9  | tick_hs | LED[7:0] = 1 |
-|LED ON| 10 | tick_hs | LED[8:0] = 1 |
+|Wait| 0  | Trig=0  | en_lfsr = 1, state+=1 |
 |LED ON| 11 | tick_hs | LED[9:0] = 1 |
-|Wait delay| 12 | time_out=1 | en_lfsr = 0, start_delay = 1 |
-|Wait| 0 | Trig = 0 | en_lfsr = 1|
+|Wait delay| 12 | timeout=1 | en lfsr = 0, start_delay = 1 |
+|LED OFF| 13 | Always | en_lfsr = 1|
 
+## Second clock divider should divide by 500 instead of 2500
+- 50MHz / 50000 = 1000Hz (1ms period)
+- 1000Hz / 2500 = 0.4Hz (2.5s period)
+- 1000Hz / 500 = 2Hz (0.5s period)
 
+# Exercise 9
 
 
 

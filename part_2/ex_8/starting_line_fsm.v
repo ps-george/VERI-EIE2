@@ -11,44 +11,62 @@ module starting_line_fsm(
 	output reg lfsr_en,start_delay;
 	output reg [9:0] ledr;
 	
-	reg state;
+	reg [3:0] state;
 	initial lfsr_en = 0;
 	initial ledr = 10'b0;
 	initial state = 4'b0;
 	initial start_delay = 0;
+	reg timeout;
+	initial timeout = 0;
 	reg triggered;
 	initial triggered = 0;
 	
-	always @ (trigger)
-		if ((trigger==1) & (state==0)) begin
-			lfsr_en <= 1;
-			triggered <=1;
+	
+	always @ (posedge clk) begin
+		if (state == 12) begin
+			if (time_out==1) begin
+				timeout <= 1;
+			end
 		end
-	always @ (time_out)
-		if ((time_out==1)&(state==12))
-			state <= 13;
-	
-	
+		else
+			timeout <= 0;
+		if (~state)
+			if (trigger == 0)
+				triggered <= 1;
+		else
+			triggered <= 0;
+	end
 	
 	always @ (posedge tick) begin
-		if (triggered == 1)
-			state <= 1;
-			triggered <= 0;
+		case(state)
+		0: begin
+			if (triggered) begin
+				state <= 1;
+				lfsr_en <= 1;
+			end
+		end
+		
+		// pause lfsr and start delay timer
+		11: begin
+			lfsr_en<=0;
+			start_delay<=1;
+			state <= state+1;
+		end
+		12: begin
+			start_delay<=0;
+			if (timeout)
+				state <= state + 1;
+		end
+		13: begin
+			ledr[9:0] = 0;
+			state <= 0;
+		end
+		default: begin
 		// If the state is 1-10, turn on an LED and increment state
-		if (11 > state > 0) begin
 			state <= state + 1;
 			ledr[state-1] <= 1;
 		end
-		// pause lfsr and start delay timer
-		if (state==11)
-			lfsr_en<=0;
-			// Never reset start_delay, should do that at some point..
-			start_delay<=1;
-			state <= state+1;
-		if (state==12)
-			start_delay<=0;
-		if (state==13)
-			ledr[9:0] = 0;
+		endcase
 	end
 		
 endmodule

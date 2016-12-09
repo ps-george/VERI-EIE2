@@ -1,6 +1,6 @@
 Flow report for ex8_top
-Fri Nov 25 17:40:02 2016
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Fri Dec 09 11:13:31 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
 ---------------------
@@ -38,24 +38,29 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Fri Nov 25 17:40:02 2016       ;
-; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
-; Revision Name               ; ex8_top                                     ;
-; Top-level Entity Name       ; ex8_top                                     ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CSEMA5F31C6                                ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Fri Dec 09 11:13:24 2016           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; ex8_top                                         ;
+; Top-level Entity Name           ; ex8_top                                         ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA5F31C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 128 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 119                                             ;
+; Total pins                      ; 50 / 457 ( 11 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/25/2016 17:39:53 ;
+; Start date & time ; 12/09/2016 11:12:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ex8_top             ;
 +-------------------+---------------------+
@@ -74,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 74889883113572.148009559306084        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564268249.148128194707892       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
@@ -86,29 +91,38 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 858 MB              ; 00:00:23                           ;
-; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:23                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 898 MB              ; 00:00:24                           ;
+; Fitter                    ; 00:00:38     ; 1.0                     ; 2697 MB             ; 00:01:08                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 897 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1211 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:02     ; --                      ; --                  ; 00:01:44                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                     ;
-+------------------------+------------------+-----------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-M5PAL1R  ; Windows 8 ; 6.2        ; x86_64         ;
-+------------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; eews104a-001     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-001     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-001     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-001     ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off ex8 -c ex8_top --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off ex8 -c ex8_top
+quartus_fit --read_settings_files=off --write_settings_files=off ex8 -c ex8_top
+quartus_asm --read_settings_files=off --write_settings_files=off ex8 -c ex8_top
+quartus_sta ex8 -c ex8_top
 
 
 

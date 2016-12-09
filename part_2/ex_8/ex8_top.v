@@ -17,7 +17,7 @@ module ex8_top(
 	wire start_delay, time_out, lfsr_en;
 	
 	modulo_counter_16 TICK50M(CLOCK_50,1,0,50000,tick_ms);
-	modulo_counter_16 TICK25K(CLOCK_50,tick_ms,0,2500,tick_hs);
+	modulo_counter_16 TICK25K(CLOCK_50,tick_ms,0,500,tick_hs);
 	
 	//clk, out
 	lfsr16 lfsr(tick_ms, lfsr_en, lfsr_out);

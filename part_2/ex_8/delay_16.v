@@ -18,12 +18,13 @@ module delay_16(
 	modulo_counter_16 MOD_N(clk,state,0,N,out);
 	
 	always @ (posedge clk) begin
-		if (trigger == 1'b1) begin
+		if (trigger == 1'b1)
 			state <= 1;
-			time_out <= out;
-		end
 		if (out == 1) begin
+			time_out <= 1;
 			state <= 0;
 		end
+		else
+			time_out <= 0;
 	end
 endmodule
