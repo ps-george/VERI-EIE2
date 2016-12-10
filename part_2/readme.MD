@@ -1,4 +1,4 @@
-# Exercise 5
+# Experiemnt 5 - Designing a counter (and testing using Quartus Simulation Tools)
 *Created new project and [./ex_5/counter_8.v](counter_8.v)
 `add wave clock enable
 add wave -hexadecimal count
@@ -7,7 +7,7 @@ force enable 1
 run 100ns
 ...`
 
-# Exercise 6
+# Experiment 6 - Impleementing the counter on DE0 (and cascading counters to make it human-detectable)
 * [links to source code]
 * error with compiler needed space after .sdc code
 ## TimeQuest Timing Analyzer - Maximum clock frequency
@@ -29,7 +29,10 @@ The entry is red because data specifying timing constraints it not available for
 3. etc
 4. etc
 
-# Exercise 7
+# Experiment 7 - Creating a PRBS (Pseudo-Random Bit Sequence) using a LFSR (Linear Feedback Shift Register)
+Manual calculation of the first 10 numbers in the 7-bit LFSR implementing polynomial `1 + X^3 + X^7`
+--------------------------------------------------------
+
 |Q6|Q5|Q4|Q3|Q2|Q1|Q0|count|
 |---|---|---|---|---|---|---|---|
 0|0|0|0|0|0|1|1
@@ -43,7 +46,7 @@ The entry is red because data specifying timing constraints it not available for
 1|1|1|1|1|0|1|(1)25
 1|1|1|1|0|1|0|(1)22
 
-# Exercise 8
+# Experiment 8 - Creating a starting line delay circuit
 Default: Turn on another LED, increment state
 |State descr| State  | Input required for next state  | Output |
 |---|---|---|---|
@@ -57,7 +60,7 @@ Default: Turn on another LED, increment state
 - 1000Hz / 2500 = 0.4Hz (2.5s period)
 - 1000Hz / 500 = 2Hz (0.5s period)
 
-# Exercise 9
+# Experiment 9 - Modify experiment 8 to create a Reaction Meter
 - Create a new module named timer_16 clocked with 1ms clock
 - Modify FSM to add a new output to start the timing
 - Display timer_16 output on HEX diplay when it has been stopped
