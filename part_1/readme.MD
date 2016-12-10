@@ -24,8 +24,8 @@ VIDEO LINK
 
 # Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
-[10_bit](10bit.PNG)
-[16_bit](16bit.PNG)
+[10_bit](./ex_4/10bit.PNG)
+[16_bit](./ex_4/16bit.PNG)
 Both images here.
 
 
