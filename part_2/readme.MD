@@ -1,4 +1,4 @@
-# Experiemnt 5 - Designing a counter (and testing using Quartus Simulation Tools)
+# Experiment 5 - Designing a counter (and testing using Quartus Simulation Tools)
 *Created new project and [./ex_5/counter_8.v](counter_8.v)
 `add wave clock enable
 add wave -hexadecimal count
