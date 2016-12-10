@@ -1,4 +1,4 @@
-# ex16
+# Experiment 16 - Implement audio all-pass loop (and amplify by 4 loop)
 
 ex16_top
 - Data into spi2adc via sdata_to_adc
@@ -19,3 +19,15 @@ allpass.v
 - Subtracts offset of 385 from data_in
 - Processes data (no processing done in allpass)
 - Adds offset of 512 and outputs data
+
+# Experiment 17 - Echo synthesizer with fixed delay
+
+
+
+
+# Experiment 18 - Multiple echoes
+* Feed output from the FIFO into input
+* Why do we subtract instead of add?
+
+
+# Experiment 19 - Echo Synthesizer with variable delay
