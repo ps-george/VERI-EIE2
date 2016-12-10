@@ -24,8 +24,10 @@ VIDEO LINK
 
 # Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
-[10_bit](./ex_4/10bit.PNG)
-[16_bit](./ex_4/16bit.PNG)
-Both images here.
+## Compiling using 16-bit uses exactly the same resources as comiling using the 10-bit verison of the bin2bcd converter!
+Compiled using 10-bit BCD
+![10_bit](./ex_4/10bit.PNG)
+Compiled using 16-bit BCD
+![16_bit](./ex_4/16bit.PNG)
 
 
