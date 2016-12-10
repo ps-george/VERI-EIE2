@@ -1,26 +1,31 @@
-# Ex1
+# Experiment 1 - Complete the schematic design of a hex to 7 segment decoder
 
-* Programmed FPGA with solution - needed to delete FPGA file instead of SOCVHPS
-* Implemented out[4] of 7seg_decoder, leaving optimisation of truth table to Quartus
-* Assigned pins in pin planner after running Analysis and Elaboration.
+* Programmed FPGA with solution - needed to delete the processor entry in the programming chain.
+* Implemented out[4] of 7seg_decoder, leaving optimisation of truth table to Quartus.
+* Assigned pins in pin planner manually after running Analysis and Elaboration.
 * Compiled project and programmed FPGA with our .sof file, tested the output.
+* Examined resources used:
+### TimeQuest Timing Analyzer Report
+Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow. See [spreadsheet](./ex_1/datasheet_diff.csv)
 
-# TimeQuest Timing Analyzer Report
-Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow.
+# Experiment 2 - Create hex to 7-segment decoder using Hardware Design Language (HDL) Verilog
+* Use `always` block to trigger whenever the input changes `always @ (*)`
+* Use `case(input)` to choose the output depending on the value of the input
+* Note that display is active low
+* Create a ex2_top.v as Top-Level entity to connect up all the inputs and outputs
+* Copy the pin assignments file into .qsf (Quartus Settings File)
 
+# Experiment 3 - display 10-bit binary switch input on the 7-segment displays
+* Changed top level Verilog file to use three of the hex_to_7seg modules created earlier.
+* Used all of the switches as input
+* Compiled and tested
 
-# Ex2
+VIDEO LINK
 
+# Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
-
-
-# Ex3
-
-* Changed top level Verilog file to use three of the hex_to_7seg modules created earlier. 
-
-
-# Ex4
-
+[10_bit](10bit.PNG)
+[16_bit](16bit.PNG)
 Both images here.
 
 
