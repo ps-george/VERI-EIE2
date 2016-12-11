@@ -1,3 +1,5 @@
+[Link back to main readme.](../readme.MD)
+
 # Experiment 1 - Complete the schematic design of a hex to 7 segment decoder
 
 * Programmed FPGA with solution - needed to delete the processor entry in the programming chain.
@@ -24,7 +26,7 @@ VIDEO LINK
 
 # Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
-## Compiling using 16-bit version uses exactly the same resources as compiling using the 10-bit verison of the bin2bcd converter!
+* Compiling using 16-bit version uses exactly the same resources as compiling using the 10-bit verison of the bin2bcd converter!
 
 Compiled using 10-bit BCD
 --------------------------------
