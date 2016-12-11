@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.917
+TNS   : -126.887
+
+Type  : Slow 1100mV 85C Model Setup 'spi2dac:CONV|clk_1MHz'
+Slack : -3.768
+TNS   : -63.075
+
+Type  : Slow 1100mV 85C Model Setup 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.777
+TNS   : -39.485
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -0.406
+TNS   : -0.766
+
+Type  : Slow 1100mV 85C Model Hold 'spi2dac:CONV|clk_1MHz'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'modulo_counter_16:TICKGEN|tick'
+Slack : 0.721
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.174
+TNS   : -68.450
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.663
+TNS   : -46.828
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'spi2dac:CONV|clk_1MHz'
+Slack : -0.394
+TNS   : -12.311
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.994
+TNS   : -119.372
+
+Type  : Slow 1100mV 0C Model Setup 'spi2dac:CONV|clk_1MHz'
+Slack : -3.906
+TNS   : -64.087
+
+Type  : Slow 1100mV 0C Model Setup 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.856
+TNS   : -40.508
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.607
+TNS   : -1.314
+
+Type  : Slow 1100mV 0C Model Hold 'spi2dac:CONV|clk_1MHz'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'modulo_counter_16:TICKGEN|tick'
+Slack : 0.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.174
+TNS   : -68.119
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.668
+TNS   : -42.859
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'spi2dac:CONV|clk_1MHz'
+Slack : -0.394
+TNS   : -12.229
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.880
+TNS   : -72.955
+
+Type  : Fast 1100mV 85C Model Setup 'spi2dac:CONV|clk_1MHz'
+Slack : -1.746
+TNS   : -28.356
+
+Type  : Fast 1100mV 85C Model Setup 'modulo_counter_16:TICKGEN|tick'
+Slack : -1.088
+TNS   : -14.794
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -0.195
+TNS   : -0.352
+
+Type  : Fast 1100mV 85C Model Hold 'spi2dac:CONV|clk_1MHz'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'modulo_counter_16:TICKGEN|tick'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.174
+TNS   : -68.366
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.712
+TNS   : -32.270
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'spi2dac:CONV|clk_1MHz'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.381
+TNS   : -58.691
+
+Type  : Fast 1100mV 0C Model Setup 'spi2dac:CONV|clk_1MHz'
+Slack : -1.687
+TNS   : -26.728
+
+Type  : Fast 1100mV 0C Model Setup 'modulo_counter_16:TICKGEN|tick'
+Slack : -1.055
+TNS   : -14.274
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.353
+TNS   : -0.688
+
+Type  : Fast 1100mV 0C Model Hold 'spi2dac:CONV|clk_1MHz'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'modulo_counter_16:TICKGEN|tick'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'modulo_counter_16:TICKGEN|tick'
+Slack : -2.174
+TNS   : -68.068
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.736
+TNS   : -38.294
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'spi2dac:CONV|clk_1MHz'
+Slack : 0.045
+TNS   : 0.000
+
+------------------------------------------------------------
