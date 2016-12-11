@@ -35,8 +35,16 @@ allpass.v
   * In this case, the FIFO was 8192x10-bit, so with the 10KHz sample frequency it gives a delay of 0.8192ms.
   
 # Experiment 18 - Multiple echoes
-* Feed output from the FIFO into input
-* Why do we subtract instead of add?
+* Feed output from the FIFO subtracted from x into input of the FIFO.
 
+* Why do we subtract instead of add?
+  
+  * To avoid positive feedback.
 
 # Experiment 19 - Echo Synthesizer with variable delay
+* Changes from previous example:
+  1. Replaced the FIFO block with a RAM block.
+  2. Created a 13-bit address counter.
+  3. The gap between the read address and the write address is determined by the value of the switches.
+  4. The delay value determined by the switches, in ms, is displayed on the LED display.
+  
