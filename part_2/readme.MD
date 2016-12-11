@@ -1,7 +1,7 @@
-[Link back to main readme.](../readme.MD)
+[Main readme](../readme.MD) | [Part one](../part_1) | [Part two](../part_2) | [Part three](../part_3) | [Part four](../part_4)
 
 # Experiment 5 - Designing a counter (and testing using Quartus Simulation Tools)
-*Created new project and [./ex_5/counter_8.v](counter_8.v)
+* Created new project and [./ex_5/counter_8.v](counter_8.v)
 `add wave clock enable
 add wave -hexadecimal count
 force clock 0 0ns, 1 10ns -repeat 20ns
