@@ -13,7 +13,7 @@ The goals of this lab were to:
 5.
 
 The experiment consisted of 4 parts:
-- [Part one](/part_1) - 
-- [Part two](/part_2) -
-- [Part three](/part_3) -
-- [Part four](/part_4) -
+- [Part one](/part_1) - Decoders for hex to 7-segment and binary to BCD (Binary-coded Decimal)
+- [Part two](/part_2) - Finite state machines: Counters, starting line lights, and reaction meter.
+- [Part three](/part_3) - Digital to analogue conversion and sinewave generators
+- [Part four](/part_4) - Audio processing: Amplify x4, and Single, Multiple & Variable Delay Echo Synthesiser
