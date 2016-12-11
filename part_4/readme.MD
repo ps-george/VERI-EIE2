@@ -23,10 +23,17 @@ allpass.v
 - Adds offset of 512 and outputs data
 
 # Experiment 17 - Echo synthesizer with fixed delay
+* Changes from previous example:
+  
+  1. Added a FIFO block.
+  2. Monitored the `.full` signal to detect when the FIFO was filled.
+  3. Once the FIFO is filled, started to read from the FIFO.
+  4. Shifted the output from the FIFO to the right by 1 and added it to the input
 
-
-
-
+* This gives a single, fixed delay proportional to the length of the FIFO.
+  
+  * In this case, the FIFO was 8192x10-bit, so with the 10KHz sample frequency it gives a delay of 0.8192ms.
+  
 # Experiment 18 - Multiple echoes
 * Feed output from the FIFO into input
 * Why do we subtract instead of add?
