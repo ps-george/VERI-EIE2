@@ -2,16 +2,11 @@
 
 # Experiment 5 - Designing a counter (and testing using Quartus Simulation Tools)
 * Created new project and [counter_8.v](./ex_5/counter_8.v)
-`add wave clock enable
-add wave -hexadecimal count
-force clock 0 0ns, 1 10ns -repeat 20ns
-force enable 1
-run 100ns
-...`
+* Tested the counter using a .do script [tb_counter.do](./ex_5/simulation/modelsim/tb_counter.do)
 
 # Experiment 6 - Implementing the counter on DE0 (and cascading counters to make it human-detectable)
 * [links to source code]
-* error with compiler needed space after .sdc code
+* Error with compiler needed space after .sdc code
 
 `create_clock -name "CLOCK_50" -period 20.000ns [get_ports {CLOCK_50}]`
 
