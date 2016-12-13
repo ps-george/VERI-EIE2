@@ -4,7 +4,11 @@
 
 //spi2dac (sysclk, data_in, load, dac_sdi, dac_cs, dac_sck, dac_ld);
 
-module ex15_top(CLOCK_50,DAC_SDI, DAC_SCK, DAC_CS, DAC_LD, ADC_SDI, ADC_SCK, ADC_CS, ADC_SDO, PWM_OUT);
+module ex15_top(	CLOCK_50,
+						DAC_SDI, DAC_SCK, DAC_CS, DAC_LD,
+						ADC_SDI, ADC_SCK, ADC_CS, ADC_SDO,
+						PWM_OUT,
+						HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 
 	input			CLOCK_50;		// DE0 50MHz system clock
 	output 		DAC_SDI;			//Serial data out to SDI of the DAC
@@ -18,16 +22,18 @@ module ex15_top(CLOCK_50,DAC_SDI, DAC_SCK, DAC_CS, DAC_LD, ADC_SDI, ADC_SCK, ADC
 	input 		ADC_SDO;			//Converted serial data from ADC
 	
 	output		PWM_OUT;			// PWM output to R channel
-	
+	output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	wire tick, CLOCK_50;
 	wire [9:0] data_adc;
 	wire data_valid;
-	
+	wire [3:0] BCD0, BCD1, BCD2, BCD3, BCD4;
+	wire [9:0] data_in;
+	wire [9:0] adr;
 	
 	spi2adc SPI_ADC (						// perform a A-to-D conversion
 		.sysclk (CLOCK_50), 				// order of parameters do not matter
-		.channel (1'b1), 											// use only CH1
-		.start (tick_10k),
+		.channel (1'b0), 					// CH0 is potentiometer
+		.start (tick),
 		.data_from_adc (data_adc),
 		.data_valid (data_valid),     // Active high
 		.sdata_to_adc (ADC_SDI),
@@ -46,4 +52,11 @@ module ex15_top(CLOCK_50,DAC_SDI, DAC_SCK, DAC_CS, DAC_LD, ADC_SDI, ADC_SCK, ADC
 	
 	pwm PWM(CLOCK_50,data_in,tick,PWM_OUT);
 	
+	bin2bcd_16 BINDECODE(data_adc, BCD0, BCD1, BCD2, BCD3, BCD4);
+	hex_to_7seg SEG0(0, HEX0);
+	hex_to_7seg SEG1(BCD0, HEX1);
+	hex_to_7seg SEG2(BCD1, HEX2);
+	hex_to_7seg SEG3(BCD2, HEX3);
+	hex_to_7seg SEG4(BCD3, HEX4);
+	hex_to_7seg SEG5(BCD4, HEX5);
 endmodule
