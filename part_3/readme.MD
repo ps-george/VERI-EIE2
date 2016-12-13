@@ -2,7 +2,7 @@
 
 # Experiment 10 - Interface with the MCP4911 Digital-to-Analogue Converter
 
-Describe pins.
+Describe pins. (very important)
 
 # Experiment 11 - D-to-A conversion using pulse-width modulation
 
