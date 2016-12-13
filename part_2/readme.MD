@@ -5,10 +5,12 @@
 * Tested the counter using a .do script [tb_counter.do](./ex_5/simulation/modelsim/tb_counter.do)
 
 # Experiment 6 - Implementing the counter on DE0 (and cascading counters to make it human-detectable)
-* [links to source code]
+* [ex6_top.v](./ex_6/ex6_top.v), fixed [modulo_counter_16.v](./ex_6/modulo_counter_16.v)
 * Error with compiler needed space after .sdc code
 
 `create_clock -name "CLOCK_50" -period 20.000ns [get_ports {CLOCK_50}]`
+
+* The .sdc code specifies timing constraints for the port CLOCK_50, which makes the simulation more detailed and reliable.
 
 ## TimeQuest Timing Analyzer - Maximum clock frequency
 1. What are the predicted maximum frequencies for this circuit under the highest and lowest temperatures?
@@ -18,10 +20,10 @@
 
 2. What are the other interesting timing data that you can discover with these reports?
   
-  * Worst-case Setup and Hold time slack details
-  * Metastability Summary
-  * Minimum Pulse Width
-  * Input Transition Times
+  * Worst-case Setup and Hold time slack details - The more slack there is, the more allowance there is to increase the speed of the clock. 
+  * Metastability Summary - Tells us whether there are any metastability problems due to asynchronous relationships, or violated setup/hold times.
+  * Minimum Pulse Width - Signifies how big the pulses on the clocks must be in order for the design to work. Useful for tick generators.
+  * Input Transition Times - Or _skew_, how long does the input take to go from Vmin to Vmax.
 
 3. Why is the TimeQuest entry red, indicating that there may be a problem?
 

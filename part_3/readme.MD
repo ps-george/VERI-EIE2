@@ -3,6 +3,8 @@
 # Experiment 10 - Interface with the MCP4911 Digital-to-Analogue Converter
 
 Describe pins. (very important)
+Timing diagram from Altera ModelSim 
+![Quartus simulation](./ex_10/Timingdiagram.PNG)
 
 # Experiment 11 - D-to-A conversion using pulse-width modulation
 
