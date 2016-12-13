@@ -25,7 +25,7 @@
 
 3. Why is the TimeQuest entry red, indicating that there may be a problem?
 
-  * The entry is red because data specifying timing constraints it not available for a number of the user-specified inputs.
+  * The entry is red because data specifying timing constraints is not available for a number of the user-specified inputs.
 
 ## FPGA resources
 ### Explain results:
