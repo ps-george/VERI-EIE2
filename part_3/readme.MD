@@ -8,7 +8,9 @@ Timing diagram from Altera ModelSim
 
 # Experiment 11 - D-to-A conversion using pulse-width modulation
 
-
+Output voltages at TP8 and TP9 are essentially the same.
+TP8 is TP5 but with the high frequency components removed.
+TP5 is the PWM signal.
 
 # Experiment 12 - Designing and testing a sinewave table in ROM
 
