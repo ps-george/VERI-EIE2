@@ -1,5 +1,5 @@
 Flow report for ex14_top
-Sun Dec 11 19:29:09 2016
+Tue Dec 13 11:14:22 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Dec 11 19:29:02 2016           ;
+; Flow Status                     ; Successful - Tue Dec 13 11:14:13 2016           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; ex14_top                                        ;
 ; Top-level Entity Name           ; ex14_top                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 46 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 91                                              ;
-; Total pins                      ; 16 / 457 ( 4 % )                                ;
+; Logic utilization (in ALMs)     ; 80 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 84                                              ;
+; Total pins                      ; 58 / 457 ( 13 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 10,240 / 4,065,280 ( < 1 % )                    ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/11/2016 19:28:03 ;
+; Start date & time ; 12/13/2016 11:13:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ex14_top            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176831339043019.148148448305596       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260248564170200.148162759908172       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ../mylib/ROM_bb.v                     ; --            ; --          ; --         ;
@@ -98,11 +98,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 911 MB              ; 00:00:22                           ;
-; Fitter                    ; 00:00:39     ; 1.0                     ; 2719 MB             ; 00:01:05                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 887 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 1231 MB             ; 00:00:06                           ;
-; Total                     ; 00:01:01     ; --                      ; --                  ; 00:01:39                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 922 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:35     ; 1.0                     ; 2640 MB             ; 00:01:00                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 889 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.1                     ; 1234 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:00     ; --                      ; --                  ; 00:01:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; eews304-001      ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; eews304-001      ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; eews304-001      ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; eews304-001      ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; eews104a-016     ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
