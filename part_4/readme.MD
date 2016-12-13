@@ -47,4 +47,14 @@ allpass.v
   2. Created a 13-bit address counter.
   3. The gap between the read address and the write address is determined by the value of the switches.
   4. The delay value determined by the switches, in ms, is displayed on the LED display.
+
+ * Why are 13 bits used for the counter?
+
+  * To ensure a suitable and audible range of variable delays when using the 9 bits provided from SW[8:0] left shifted by 4 bits as the delay value and a 10KHz rate of incrementation.
+  
+ * Why is the value of SW[8:0] multiplied by 1638?
+
+  * (TODO: Copy explanation from notes) 
+  
+
   
