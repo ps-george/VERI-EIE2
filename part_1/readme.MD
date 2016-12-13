@@ -7,6 +7,7 @@
 * Assigned pins in pin planner manually after running Analysis and Elaboration.
 * Compiled project and programmed FPGA with our .sof file, tested the output.
 * Examined resources used:
+
 ### TimeQuest Timing Analyzer Report
 Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow. See [spreadsheet](./ex_1/datasheet_diff.csv)
 
