@@ -34,19 +34,16 @@ https://youtu.be/7ECb1tDg4Ck
 
 # Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
-*[bin2bcd_10.v](./ex_4/bin2bcd_10.v) implemented from the derived block diagram similar to that shown below, where each "A*" block performs the "shift and add 3" algorithm.
+* [bin2bcd_10.v](./ex_4/bin2bcd_10.v) implemented from the derived block diagram similar to that shown below from problem sheet 1, where each "An" block performs the "shift and add 3" algorithm.
 * Compiling using 16-bit version uses exactly the same resources as compiling using the 10-bit verison of the bin2bcd converter!
 
-10-bit BCD Block Diagram
---------------------------------
+### 10-bit BCD Block Diagram
 ![block](./ex_4/bin2bcd10.png)
 
-Compiled using 10-bit BCD
---------------------------------
+### Compiled using 10-bit BCD
 ![10_bit](./ex_4/10bit.PNG)
 
-Compiled using 16-bit BCD
---------------------------------
+### Compiled using 16-bit BCD
 ![16_bit](./ex_4/16bit.PNG)
 
 
