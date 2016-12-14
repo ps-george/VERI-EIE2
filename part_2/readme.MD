@@ -81,7 +81,10 @@ https://youtu.be/6i-C9znA6I8
 # Experiment 8 - Creating a starting line delay circuit
 ###Design
 
-Default: Turn on another LED, increment state
+* A 16-bit LFSR is used in this experiment.
+* 16 bits are also used within the delay module.
+
+Default state: Turn on another LED, increment state
 
 |State descr|State|Input required for next state|Output|
 |---|---|---|---|
@@ -90,8 +93,7 @@ Default: Turn on another LED, increment state
 |Wait delay| 12 | timeout=1 | start_delay = 0 |
 |LED OFF| 13 | tick_hs | LEDR[9:0] = 0 |
 
-*A 16-bit LFSR is used in this experiment.
-*16 bits are also used within the delay module.
+
 
 ### Demonstration Video
 https://youtu.be/qhqajR2W9S0
