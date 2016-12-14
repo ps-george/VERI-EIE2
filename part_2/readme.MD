@@ -79,6 +79,8 @@ Total DLLS|0
 https://youtu.be/6i-C9znA6I8
 
 # Experiment 8 - Creating a starting line delay circuit
+###Design
+
 Default: Turn on another LED, increment state
 
 |State descr|State|Input required for next state|Output|
@@ -88,7 +90,11 @@ Default: Turn on another LED, increment state
 |Wait delay| 12 | timeout=1 | start_delay = 0 |
 |LED OFF| 13 | tick_hs | LEDR[9:0] = 0 |
 
-VIDEO
+*A 16-bit LFSR is used in this experiment.
+*16 bits are also used within the delay module.
+
+### Demonstration Video
+https://youtu.be/qhqajR2W9S0
 
 ## Second clock divider should divide by 500 instead of 2500
 - 50MHz / 50000 = 1000Hz (1ms period)
@@ -100,7 +106,8 @@ VIDEO
 - Modify FSM to add a new output to start the timing
 - Display timer_16 output on HEX diplay when it has been stopped
 
-VIDEO
+### Demonstration Video
+https://youtu.be/H1HPmvCAX7I
 
 
 
