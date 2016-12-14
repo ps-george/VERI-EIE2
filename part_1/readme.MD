@@ -11,7 +11,7 @@
 ### TimeQuest Timing Analyzer Report
 Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow. See [spreadsheet](./ex_1/datasheet_diff.csv)
 
-VIDEO
+https://www.youtube.com/watch?v=798pyNVvAus
 
 # Experiment 2 - Create hex to 7-segment decoder using Hardware Design Language (HDL) Verilog
 * [hex_to_7seg.v](./ex_2/hex_to_7seg.v)

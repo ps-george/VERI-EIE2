@@ -8,7 +8,8 @@ The goal of this lab was to develop an understanding of digital design, this inv
 
 1. Using a Hardware Description Language (HDL), specifically Verilog, instead of schematic diagrams.
 2. Creating reusable _modular_ components to prevent oneself from reinventing the wheel every time.
-3. Synchronising to system clocks to ensure the predictability of the functioning of the design.
+3. Synchronising to system clocks to ensure predictability in the functioning of the design.
+4. Exploring the practical implementation quirks of some of the more complex circuitry introduced in lectures.
 
 The experiment consisted of 4 parts:
 - [Part one](/part_1) - Decoders for hex to 7-segment and binary to BCD (Binary-coded Decimal)
