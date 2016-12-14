@@ -1,8 +1,11 @@
 [Main readme](../readme.MD) | [Part one](../part_1) | [Part two](../part_2) | [Part three](../part_3) | [Part four](../part_4)
 
 # Experiment 5 - Designing a counter (and testing using Quartus Simulation Tools)
-* Created new project and [counter_8.v](./ex_5/counter_8.v)
-* Tested the counter using a .do script [tb_counter.do](./ex_5/simulation/modelsim/tb_counter.do)
+* Created new project and [counter_8.v](./ex_5/counter_8.v). The Verilog code for the latter simply assigns the value of count to the current value plus one at every rising edge of the clock, if enable is asserted.
+* Compiled the file, then tested the counter through ModelSim firstly by entering commands in the transcript window and then using a .do script [tb_counter.do](./ex_5/simulation/modelsim/tb_counter.do), in both cases producing the waveform displayed below.
+
+### Simulated Waveform
+![Waveform](./ex_5/Simulated waveform.PNG)
 
 # Experiment 6 - Implementing the counter on DE0 (and cascading counters to make it human-detectable)
 * [ex6_top.v](./ex_6/ex6_top.v), fixed [modulo_counter_16.v](./ex_6/modulo_counter_16.v)
