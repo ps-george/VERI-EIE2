@@ -6,35 +6,14 @@
 * Implemented out[4] of 7seg_decoder using schematic, leaving optimisation of truth table to Quartus.
 * Assigned pins in pin planner manually after running Analysis and Elaboration.
 * Compiled project and programmed FPGA with our .sof file, tested the output.
-* Examined resources used:
 
-	+-----------------------------------------------------------------------------------+
-	; Flow Summary                                                                      ;
-	+---------------------------------+-------------------------------------------------+
-	; Flow Status                     ; Successful - Fri Nov 18 09:59:20 2016           ;
-	; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
-	; Revision Name                   ; ex1_top                                         ;
-	; Top-level Entity Name           ; ex1_top                                         ;
-	; Family                          ; Cyclone V                                       ;
-	; Device                          ; 5CSEMA5F31C6                                    ;
-	; Timing Models                   ; Final                                           ;
-	; Logic utilization (in ALMs)     ; 4 / 32,070 ( < 1 % )                            ;
-	; Total registers                 ; 0                                               ;
-	; Total pins                      ; 11 / 457 ( 2 % )                                ;
-	; Total virtual pins              ; 0                                               ;
-	; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
-	; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
-	; Total HSSI RX PCSs              ; 0                                               ;
-	; Total HSSI PMA RX Deserializers ; 0                                               ;
-	; Total HSSI TX PCSs              ; 0                                               ;
-	; Total HSSI PMA TX Serializers   ; 0                                               ;
-	; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
-	; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-	+---------------------------------+-------------------------------------------------+
+### FPGA Resource Usage
+![16_bit](./ex_4/16bit.PNG)
 
 ### TimeQuest Timing Analyzer Report
 Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow. See [spreadsheet](./ex_1/datasheet_diff.csv)
 
+### Demonstration Video
 https://www.youtube.com/watch?v=798pyNVvAus
 
 # Experiment 2 - Create hex to 7-segment decoder using Hardware Design Language (HDL) Verilog
