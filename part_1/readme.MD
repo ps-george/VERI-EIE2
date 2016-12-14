@@ -26,8 +26,8 @@ https://www.youtube.com/watch?v=798pyNVvAus
 
 # Experiment 3 - display 10-bit binary switch input on the 7-segment displays
 * Changed top level Verilog file [ex3_top.v](./ex_3/ex3_top.v) to use three of the hex_to_7seg modules created earlier.
-* Used all of the switches as input.
-* Compiled and tested.
+* Used all of the switches as input
+* Compiled and tested
 
 ### Demonstration Video
 https://youtu.be/7ECb1tDg4Ck
@@ -35,11 +35,7 @@ https://youtu.be/7ECb1tDg4Ck
 # Experiment 4 - display 10-bit binary switch input as BCD on the 7-segment displays
 
 * [bin2bcd_10.v](./ex_4/bin2bcd_10.v) implemented from the derived block diagram similar to that shown below from problem sheet 1, where each "An" block performs the "shift and add 3" algorithm.
-* Extended top-level design file from previous experiment to create [ex4_top.v](./ex_4/ex4_top.v), compiled all and worked as anticipated.
-* Compiling using 16-bit version uses exactly the same resources as compiling using the 10-bit verison of the bin2bcd converter! This is due to optimisation applied by Quartus in eliminating the logic within the block that is unused due to not being connected.
-
-### Demonstration Video
-https://youtu.be/DG-BM4EkwcE
+* Compiling using 16-bit version uses exactly the same resources as compiling using the 10-bit verison of the bin2bcd converter!
 
 ### 10-bit BCD Block Diagram
 ![block](./ex_4/bin2bcd10.png)
