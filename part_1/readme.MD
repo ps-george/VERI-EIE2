@@ -8,7 +8,7 @@
 * Compiled project and programmed FPGA with our .sof file, tested the output.
 
 ### FPGA Resource Usage
-![16_bit](./ex_1/resources.PNG)
+![Resources](./ex_1/resources.png)
 
 ### TimeQuest Timing Analyzer Report
 Delay difference: 85C is around 0.5ns slower than 0C, this is because at higher temperatures resistance in the circuit increases, slowing down current flow. See [spreadsheet](./ex_1/datasheet_diff.csv)
