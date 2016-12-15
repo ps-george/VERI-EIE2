@@ -79,10 +79,13 @@ Total DLLS|0
 https://youtu.be/6i-C9znA6I8
 
 # Experiment 8 - Creating a starting line delay circuit
-###Design
+### Design
 
 * A 16-bit LFSR is used in this experiment.
 * 16 bits are also used within the delay module.
+
+### State Diagram
+![State diagram](./starting_line_fsm_state_diagram.png)
 
 Default state: Turn on another LED, increment state
 
