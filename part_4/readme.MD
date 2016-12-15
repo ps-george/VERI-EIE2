@@ -62,7 +62,7 @@ https://www.youtube.com/edit?o=U&video_id=fw2YzHBKjQY
 
   * To ensure a suitable and audible range of variable delays when using the 9 bits provided from SW[8:0] left shifted by 4 bits as the delay value and a 10KHz rate of incrementation.
   
- * Why is the value of SW[8:0] multiplied by 1638 and why is the most significant 10 bits the delasy in milliseconds?
+ * Why is the value of SW[8:0] multiplied by 1638 and why is the most significant 10 bits of the product the delay in milliseconds?
 
   * To get the delay value in milliseconds, the decimal value of the switches must be multiplied by 1.6. Multiplying by 1638 and taking the most significant 10 bits only (therefore dividing by 1024) is equivalent to this. This is done to avoid performing direct division within the design.
   
