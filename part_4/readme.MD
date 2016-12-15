@@ -22,6 +22,9 @@ allpass.v
 - Processes data (no processing done in allpass)
 - Adds offset of 512 and outputs data
 
+### Demonstration Video
+https://youtu.be/YxDPZpT5f70
+
 # Experiment 17 - Echo synthesizer with fixed delay
 * Changes from previous example:
   
@@ -33,9 +36,13 @@ allpass.v
 * This gives a single, fixed delay proportional to the length of the FIFO.
   
   * In this case, the FIFO was 8192x10-bit, so with the 10KHz sample frequency it gives a delay of 0.8192ms.
+  * Used attenuation factor of 1/2.
   
 # Experiment 18 - Multiple echoes
 * Feed output from the FIFO subtracted from x into input of the FIFO.
+
+### Demonstration Video
+https://youtu.be/2h9hjTysqWM
 
 * Why do we subtract instead of add?
   
@@ -47,14 +54,17 @@ allpass.v
   2. Created a 13-bit address counter.
   3. The gap between the read address and the write address is determined by the value of the switches.
   4. The delay value determined by the switches, in ms, is displayed on the LED display.
+  
+### Demonstration Video
+https://www.youtube.com/edit?o=U&video_id=fw2YzHBKjQY
 
  * Why are 13 bits used for the counter?
 
   * To ensure a suitable and audible range of variable delays when using the 9 bits provided from SW[8:0] left shifted by 4 bits as the delay value and a 10KHz rate of incrementation.
   
- * Why is the value of SW[8:0] multiplied by 1638?
+ * Why is the value of SW[8:0] multiplied by 1638 and why is the most significant 10 bits the delasy in milliseconds?
 
-  * (TODO: Copy explanation from notes) 
+  * To get the delay value in milliseconds, the decimal value of the switches must be multiplied by 1.6. Multiplying by 1638 and taking the most significant 10 bits only (therefore dividing by 1024) is equivalent to this. This is done to avoid performing direct division within the design.
   
 
   
