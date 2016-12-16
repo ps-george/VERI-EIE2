@@ -1,5 +1,9 @@
 [Main readme](../readme.MD) | [Part one](../part_1) | [Part two](../part_2) | [Part three](../part_3) | [Part four](../part_4)
 
+# Objective of Lab
+
+To learn why Verilog HDL is superior to schematic capture.
+
 # Experiment 1 - Complete the schematic design of a hex to 7 segment decoder
 
 * First programmed FPGA with provided solution - needed to delete the redundant processor entry in the programming chain.
