@@ -65,7 +65,7 @@ https://youtu.be/fw2YzHBKjQY
 
  * Why are 13 bits used for the counter?
 
-  * To ensure a suitable and audible range of variable delays when using the 9 bits provided from SW[8:0] left shifted by 4 bits as the delay value and a 10KHz rate of incrementation.
+  * Because there are 13-bits worth of addressable RAM. (RAM is 8192x9-bit, 2^13 is 8192.)
   
  * Why is the value of SW[8:0] multiplied by 1638 and why is the most significant 10 bits of the product the delay in milliseconds?
 
