@@ -38,7 +38,7 @@ https://youtu.be/4DqFP13b3SI
 1. Initialize ROM using rom_data.mif file generated with Matlab or Python code.
 2. Use switches to specify and access specific areas of the ROM and check the data is correct - it was.
 
-./rom_data.mif
+[rom_data.mif](./rom_data.mif)
 
 # Experiment 13 - A fixed frequency sinewave generator
 
