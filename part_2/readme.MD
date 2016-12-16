@@ -1,5 +1,10 @@
 [Main readme](../readme.MD) | [Part one](../part_1) | [Part two](../part_2) | [Part three](../part_3) | [Part four](../part_4)
 
+# Objective of Lab
+
+* Learn how to design counters and simple FSMs.
+* Explore multistage cascade counters.
+
 # Experiment 5 - Designing a counter (and testing using Quartus Simulation Tools)
 * Created new project and [counter_8.v](./ex_5/counter_8.v). The Verilog code for the latter simply assigns the value of count to the current value plus one at every rising edge of the clock, if enable is asserted.
 * Compiled the file, then tested the counter through ModelSim. Firstly by entering commands in the transcript window, then by using a .do script [tb_counter.do](./ex_5/simulation/modelsim/tb_counter.do), in both cases producing the waveform displayed below.

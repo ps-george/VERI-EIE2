@@ -2,7 +2,8 @@
 
 # Objective of Lab
 
-To learn why Verilog HDL is superior to schematic capture.
+* Revision of Quartus.
+* To learn why Verilog HDL is superior to schematic capture.
 
 # Experiment 1 - Complete the schematic design of a hex to 7 segment decoder
 

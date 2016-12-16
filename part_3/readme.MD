@@ -1,5 +1,11 @@
 [Main readme](../readme.MD) | [Part one](../part_1) | [Part two](../part_2) | [Part three](../part_3) | [Part four](../part_4)
 
+# Objective of Lab
+
+* Learn how the SPI functions.
+* Learn how to use ROM, a multiplier and a DAC to produce sinewaves of different frequencies.
+* Compare DAC chip and PWM outputs.
+
 # Experiment 10 - Interface with the MCP4911 Digital-to-Analogue Converter
 
 * Purpose of each pin on the DAC (page 17).
