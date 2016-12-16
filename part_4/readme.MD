@@ -61,7 +61,7 @@ https://youtu.be/2h9hjTysqWM
   4. The delay value determined by the switches, in ms, is displayed on the LED display.
   
 ### Demonstration Video
-https://www.youtu.be/fw2YzHBKjQY
+https://youtu.be/fw2YzHBKjQY
 
  * Why are 13 bits used for the counter?
 
